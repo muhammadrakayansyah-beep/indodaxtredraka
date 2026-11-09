@@ -1,0 +1,52 @@
+{
+  "functions": {
+    "api/tick.py": {
+      "maxDuration": 120,
+      "includeFiles": "bot/**"
+    },
+    "api/dashboard.py": {
+      "maxDuration": 120,
+      "includeFiles": "{bot/**,data/*.json}"
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/tick?src=vercel-cron",
+      "schedule": "17 0 * * *"
+    },
+    {
+      "path": "/api/tick?src=vercel-cron",
+      "schedule": "17 3 * * *"
+    },
+    {
+      "path": "/api/tick?src=vercel-cron",
+      "schedule": "17 6 * * *"
+    },
+    {
+      "path": "/api/tick?src=vercel-cron",
+      "schedule": "17 9 * * *"
+    },
+    {
+      "path": "/api/tick?src=vercel-cron",
+      "schedule": "17 12 * * *"
+    },
+    {
+      "path": "/api/tick?src=vercel-cron",
+      "schedule": "17 15 * * *"
+    },
+    {
+      "path": "/api/tick?src=vercel-cron",
+      "schedule": "17 18 * * *"
+    },
+    {
+      "path": "/api/tick?src=vercel-cron",
+      "schedule": "17 21 * * *"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/dashboard"
+    }
+  ]
+}
