@@ -168,6 +168,16 @@ semua angka dihasilkan oleh <code>scripts/hitung_ulang.py</code> dari log mentah
                  "<h3>Backtest jendela yang sama</h3>" + trade_block(sw) +
                  "<h3>Backtest penuh</h3>" + trade_block(bf) + "</section>")
 
+    pf = D.get("portfolio")
+    if pf:
+        parts.append("<section><h2>Portofolio (akhir jendela forward)</h2><div class='grid'>" + "".join([
+            card("Kas virtual", rp(pf["cash"])),
+            card("Inventori di best bid", rp(pf["inventory_at_bid"])),
+            card("Ekuitas", rp(pf["equity"]), f"per {pf['as_of']}"),
+            card("Posisi terbuka", pf["open_positions"]),
+            card("P/L terealisasi", rp(pf["realized_pnl"])),
+            card("P/L belum terealisasi", rp(pf["unrealized_pnl"])),
+        ]) + "</div></section>")
     parts.append("<section><h2>Ekuitas</h2><h3>Forward (setiap panggilan, ditandai di best bid)</h3>" +
                  svg_line(D.get("forward_equity") or []) +
                  "<h3>Backtest penuh (mingguan)</h3>" + svg_line(D.get("backtest_full_curve") or []) +
@@ -178,17 +188,33 @@ semua angka dihasilkan oleh <code>scripts/hitung_ulang.py</code> dari log mentah
 
     parts.append("<section><h2>Panel operasional</h2><div class='grid'>" + "".join([
         card("Uptime candle", pct(up.get("uptime")), f"{up.get('candles_on_time', 0)}/{up.get('candles_scheduled', 0)} candle tepat waktu"),
-        card("Panggilan terlaksana", ops.get("calls_total", 0), f"perkiraan jadwal per jam: {ops.get('hourly_calls_expected', 0)}"),
+        card("Cron terjadwal vs terlaksana", f"{ops.get('cron_scheduled', 0)} / {ops.get('cron_executed', 0)}",
+             f"{ops.get('cron_schedule', '')}; total panggilan {ops.get('calls_total', 0)} (termasuk uji koneksi)"),
         card("Panggilan OK / error", f"{ops.get('calls_ok', 0)} / {ops.get('calls_error', 0)}"),
         card("Error API (percobaan gagal)", ops.get("api_errors", 0)),
         card("Kill switch (on/off)", ops.get("kill_switch_events", 0), f"panggilan saat aktif: {ops.get('kill_switch_active_calls', 0)}"),
         card("Daily loss limit tersentuh", ops.get("daily_loss_limit_hits", 0)),
         card("Data tidak valid", ops.get("data_invalid_events", 0)),
         card("Entry diblokir", ops.get("entry_blocked_events", 0)),
+        card("Durasi panggilan", f"{num((D.get('latency') or {}).get('duration_median_s'), 1)} dtk",
+             f"maks {num((D.get('latency') or {}).get('duration_max_s'), 1)} dtk (batas 300)"),
+        card("Drift cron dari jadwal", f"{num((D.get('latency') or {}).get('cron_drift_median_min'), 2)} mnt",
+             f"maks {num((D.get('latency') or {}).get('cron_drift_max_min'), 2)} mnt; n={(D.get('latency') or {}).get('cron_calls', 0)}"),
+        card("Percobaan API gagal (retry)", (D.get("latency") or {}).get("retry_attempts_failed", 0)),
     ]) + "</div>" + table(["Candle (UTC)", "Ditutup", "Batas", "Tepat waktu"] + D.get("universe", []),
                           [[r["candle_time"], r["closes_at"], r["deadline"], "ya" if r["ok"] else "tidak"] +
                            [r["per_pair"][p] for p in D.get("universe", [])] for r in up.get("rows", [])]) + "</section>")
 
+    dh = D.get("data_health") or []
+    parts.append("<section><h2>Kesehatan data</h2>" +
+                 table(["Pair", "Snapshot", "Buku kosong", "Spread >2%", "Spread min", "Median", "P90", "Maks",
+                        "Candle terakhir", "Umur saat diproses", "Data tidak valid", "Candle terlewat"],
+                       [[r["pair"], r["snapshots"], r["empty_books"], r["spread_over_2pct"], pct(r["spread_min"], 4),
+                         pct(r["spread_median"], 4), pct(r["spread_p90"], 4), pct(r["spread_max"], 4),
+                         r["last_candle"] or NA,
+                         f"{num(r['last_candle_age_min_at_processing'], 1)} mnt" if r["last_candle_age_min_at_processing"] is not None else NA,
+                         r["invalid_data_events"], r["missed_candle_events"]] for r in dh]) +
+                 "<p class='muted'>Spread = (ask − bid) / mid dari setiap snapshot order book di jendela forward.</p></section>")
     if sm:
         parts.append("<section><h2>Sinyal candle demi candle: forward vs backtest</h2>" +
                      table(["Pair", "Candle", "Forward", "Backtest", "Cocok", "Alasan forward", "Alasan backtest"],

@@ -6,7 +6,7 @@ Bot trading **dry run** (order simulasi, tanpa uang sungguhan, tanpa API key). B
 - Status freeze: lihat [FREEZE.md](FREEZE.md). **Belum ada commit freeze yang sah.**
 - Sumber fee dan minimum order: [FEES_SOURCES.md](FEES_SOURCES.md).
 - Refleksi: [REFLEKSI.md](REFLEKSI.md) (final; angka dari `data/dashboard_data.json`).
-- Model eksekusi: [docs/execution-model.md](docs/execution-model.md) · Kebijakan risiko: [docs/risk-policy.md](docs/risk-policy.md) · Change log: [docs/change-log.md](docs/change-log.md)
+- Model eksekusi: [docs/execution-model.md](docs/execution-model.md) · Kebijakan risiko: [docs/risk-policy.md](docs/risk-policy.md) · Change log: [docs/change-log.md](docs/change-log.md) · Metrik: [docs/metrics.md](docs/metrics.md) · Checklist: [docs/acceptance-checklist.md](docs/acceptance-checklist.md)
 
 Hanya memakai **standard library Python 3.9+**. Tidak ada dependensi pihak ketiga.
 
@@ -38,8 +38,11 @@ bot/storage.py        Vercel Blob / Upstash Redis REST (+ file lokal untuk tes)
 scripts/              fetch_history, collect_snapshots, calibrate_costs, universe_selection,
                       backtest, export_logs, hitung_ulang, kill_switch, reset_state,
                       log_bugfix, freeze_manifest, smoke_test, export_submission
-docs/                 execution-model.md, risk-policy.md, change-log.md
-tests/test_core.py    unit test (sinyal, candle tertutup, sweep, auth, idempotency, kill switch, retry)
+docs/                 execution-model.md, risk-policy.md, change-log.md, metrics.md,
+                      acceptance-checklist.md
+data/candles/         candle 1D mentah Indodax yang dipakai backtest (hash di backtest_full.json)
+tests/                37 tes: sinyal, candle tertutup, eksekusi, invarian, risiko, resiliensi,
+                      paritas backtest-live, rekonsiliasi dashboard
 vercel.json           konfigurasi fungsi + 8 cron harian
 .vercelignore         berkas yang tidak ikut deploy
 bot/assets/logo.png   logo dashboard (disematkan sebagai data URI)

@@ -1,5 +1,5 @@
 {
- "generated_for_now": "2026-11-14T11:43:56Z",
+ "generated_for_now": "2026-11-14T13:06:38Z",
  "strategy_version": "mr-rsi4-sma200-v1",
  "universe": [
   "BTCIDR",
@@ -2292,7 +2292,9 @@
   "calls_ok": 42,
   "calls_error": 0,
   "calls_skipped_locked": 0,
-  "hourly_calls_expected": 240,
+  "cron_scheduled": 80,
+  "cron_executed": 40,
+  "cron_schedule": "menit 17, jam UTC 0,3,6,9,12,15,18,21",
   "api_errors": 0,
   "kill_switch_events": 0,
   "kill_switch_active_calls": 0,
@@ -3029,6 +3031,81 @@
    "cond_sma50_sma200": false
   }
  ],
+ "portfolio": {
+  "as_of": "2026-11-14T03:17:42Z",
+  "cash": 100000000.0,
+  "inventory_at_bid": 0.0,
+  "equity": 100000000.0,
+  "open_positions": 0,
+  "realized_pnl": 0,
+  "unrealized_pnl": 0.0
+ },
+ "data_health": [
+  {
+   "pair": "BTCIDR",
+   "snapshots": 42,
+   "empty_books": 0,
+   "spread_over_2pct": 0,
+   "spread_min": 7.389161651581077e-07,
+   "spread_median": 6.644744844006158e-05,
+   "spread_p90": 0.000992803078370837,
+   "spread_max": 0.001870945028416235,
+   "last_candle": "2026-11-13T00:00:00Z",
+   "last_candle_age_min_at_processing": 17.366666666666667,
+   "invalid_data_events": 0,
+   "missed_candle_events": 0
+  },
+  {
+   "pair": "ETHIDR",
+   "snapshots": 42,
+   "empty_books": 0,
+   "spread_over_2pct": 0,
+   "spread_min": 2.5836121481443206e-05,
+   "spread_median": 0.0005909246215201932,
+   "spread_p90": 0.0012863253978941012,
+   "spread_max": 0.00389884956481151,
+   "last_candle": "2026-11-13T00:00:00Z",
+   "last_candle_age_min_at_processing": 17.366666666666667,
+   "invalid_data_events": 0,
+   "missed_candle_events": 0
+  },
+  {
+   "pair": "XRPIDR",
+   "snapshots": 42,
+   "empty_books": 0,
+   "spread_over_2pct": 0,
+   "spread_min": 5.067267982467253e-05,
+   "spread_median": 0.0006766241061096752,
+   "spread_p90": 0.001580597919341961,
+   "spread_max": 0.002769176547592075,
+   "last_candle": "2026-11-13T00:00:00Z",
+   "last_candle_age_min_at_processing": 17.366666666666667,
+   "invalid_data_events": 0,
+   "missed_candle_events": 0
+  },
+  {
+   "pair": "DOGEIDR",
+   "snapshots": 42,
+   "empty_books": 0,
+   "spread_over_2pct": 0,
+   "spread_min": 0.0007927070947284979,
+   "spread_median": 0.0015804052231424776,
+   "spread_p90": 0.00241721560393285,
+   "spread_max": 0.002532714225411566,
+   "last_candle": "2026-11-13T00:00:00Z",
+   "last_candle_age_min_at_processing": 17.366666666666667,
+   "invalid_data_events": 0,
+   "missed_candle_events": 0
+  }
+ ],
+ "latency": {
+  "duration_median_s": 10.3945,
+  "duration_max_s": 11.926,
+  "cron_calls": 40,
+  "cron_drift_median_min": 0.32499999999999996,
+  "cron_drift_max_min": 0.8333333333333334,
+  "retry_attempts_failed": 0
+ },
  "events_sample": [
   {
    "ts": "2026-11-09T04:01:55Z",

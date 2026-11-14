@@ -9,5 +9,3 @@ venv/
 .vercel/
 node_modules/
 
-# data candle hasil tarik ulang (besar, bisa dibuat ulang dengan scripts/fetch_history.py)
-data/candles/*.json

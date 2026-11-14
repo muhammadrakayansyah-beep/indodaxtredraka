@@ -274,6 +274,85 @@ def latest_signals(signals):
     return out
 
 
+# Harus sama dengan "crons" di vercel.json (dicek oleh tests/test_blueprint.py)
+CRON_MINUTE = 17
+CRON_HOURS_UTC = (0, 3, 6, 9, 12, 15, 18, 21)
+
+
+def scheduled_cron_times(start, end):
+    """Waktu panggilan cron terjadwal di antara start dan end (inklusif)."""
+    out = []
+    day = (start // 86400) * 86400
+    while day <= end:
+        for h in CRON_HOURS_UTC:
+            t = day + h * 3600 + CRON_MINUTE * 60
+            if start <= t <= end:
+                out.append(t)
+        day += 86400
+    return out
+
+
+def _pct(vals, q):
+    if not vals:
+        return None
+    v = sorted(vals)
+    k = (len(v) - 1) * q
+    lo, hi = int(k), min(int(k) + 1, len(v) - 1)
+    return v[lo] + (v[hi] - v[lo]) * (k - lo)
+
+
+def portfolio_panel(calls, orders):
+    """Kas, nilai inventori di best bid, ekuitas, P/L dari panggilan terakhir di jendela."""
+    ok = [c for c in calls if "equity" in c]
+    if not ok:
+        return None
+    last = ok[-1]
+    realized = sum(o.get("realized_pnl") or 0.0 for o in orders if o["side"] == "SELL")
+    eq = last["equity"]
+    return {"as_of": last["ts_wall"], "cash": last["cash"], "inventory_at_bid": eq - last["cash"],
+            "equity": eq, "open_positions": last.get("open_positions", 0), "realized_pnl": realized,
+            "unrealized_pnl": eq - C.INITIAL_CAPITAL_IDR - realized}
+
+
+def data_health_panel(signals, events, snapshots, start, end):
+    snaps = [s for s in snapshots if start <= s["ts_unix"] <= end]
+    out = []
+    for p in C.UNIVERSE:
+        ss = [s for s in snaps if s["pair"] == p]
+        spreads = []
+        empty = 0
+        for s in ss:
+            st = X.book_stats({"bids": s["bids"], "asks": s["asks"]})
+            if st is None:
+                empty += 1
+            else:
+                spreads.append(st["spread_pct"])
+        sig = [s for s in signals if s["pair"] == p and s.get("delay_s") is not None]
+        last_sig = max(sig, key=lambda x: x["candle_time"]) if sig else None
+        out.append({
+            "pair": p, "snapshots": len(ss), "empty_books": empty,
+            "spread_over_2pct": sum(1 for x in spreads if x > C.MAX_SPREAD_PCT),
+            "spread_min": min(spreads) if spreads else None, "spread_median": _pct(spreads, 0.5),
+            "spread_p90": _pct(spreads, 0.9), "spread_max": max(spreads) if spreads else None,
+            "last_candle": iso(last_sig["candle_time"]) if last_sig else None,
+            "last_candle_age_min_at_processing": last_sig["delay_s"] / 60 if last_sig else None,
+            "invalid_data_events": sum(1 for e in events if e["type"] == "data_invalid" and e.get("pair") == p),
+            "missed_candle_events": sum(1 for e in events if e["type"] == "missed_candles" and e.get("pair") == p),
+        })
+    return out
+
+
+def latency_panel(calls, errors):
+    durs = [c["duration_s"] for c in calls if c.get("duration_s") is not None]
+    cron = [c for c in calls if c.get("trigger") == "vercel-cron"]
+    # jadwal cron di menit ke-17; drift = waktu mulai sebenarnya - menit ke-17 jam tersebut
+    drift = [((c["ts_wall_unix"] % 3600) - 17 * 60) / 60 for c in cron]
+    return {"duration_median_s": _pct(durs, 0.5), "duration_max_s": max(durs) if durs else None,
+            "cron_calls": len(cron), "cron_drift_median_min": _pct(drift, 0.5),
+            "cron_drift_max_min": max(drift) if drift else None,
+            "retry_attempts_failed": len(errors)}
+
+
 def compute_all(raw, candles, calib, backtest_full, now_ts, backtest_orders=None):
     """raw: {stream: [records]} log mentah. candles: {pair: [...]} dari Indodax yang
     mencakup jendela forward + INDICATOR_WINDOW. backtest_full: hasil scripts/backtest.py."""
@@ -322,13 +401,16 @@ def compute_all(raw, candles, calib, backtest_full, now_ts, backtest_orders=None
         same["orders"] = res["orders"]
 
     up = uptime(signals, start, end, now_ts)
-    sched_hours = max(0, (min(end, now_ts) - start) // 3600)
+    sched = scheduled_cron_times(start, min(end, now_ts))
+    cron_done = [c for c in calls if c.get("trigger") == "vercel-cron"]
     ops = {
         "calls_total": len(calls),
         "calls_ok": sum(1 for c in calls if c.get("status") == "ok"),
         "calls_error": sum(1 for c in calls if c.get("status", "").startswith("error")),
         "calls_skipped_locked": sum(1 for c in calls if c.get("status") == "skipped_locked"),
-        "hourly_calls_expected": sched_hours,
+        "cron_scheduled": len(sched),
+        "cron_executed": len(cron_done),
+        "cron_schedule": f"menit {CRON_MINUTE}, jam UTC {','.join(str(h) for h in CRON_HOURS_UTC)}",
         "api_errors": len(errors),
         "kill_switch_events": sum(1 for e in events if e["type"] in ("kill_switch_on", "kill_switch_off")),
         "kill_switch_active_calls": sum(1 for c in calls if c.get("kill_switch")),
@@ -369,6 +451,9 @@ def compute_all(raw, candles, calib, backtest_full, now_ts, backtest_orders=None
         "backtest_orders": backtest_orders,
         "execution_probe": execution_probe(snaps, start, end),
         "latest_signals": latest_signals(signals),
+        "portfolio": portfolio_panel(calls, orders),
+        "data_health": data_health_panel(signals, events, snaps, start, end),
+        "latency": latency_panel(calls, errors),
         "events_sample": events[-50:],
         "errors_sample": errors[-50:],
     }
