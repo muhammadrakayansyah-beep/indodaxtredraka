@@ -54,3 +54,7 @@ Bagian ini mencatat keputusan yang dibuat saat kode bot ditulis. Semuanya **belu
 6. **Daily loss limit di backtest** adalah aproksimasi. Candle harian tidak punya titik 00:00 WIB, jadi entry pada open t diblokir bila ekuitas close t-1 < 98% ekuitas close t-2. Bot live memakai batas hari WIB yang sebenarnya.
 7. **Laba kotor** untuk porsi biaya = Σ (mid keluar − mid masuk) × qty pada trade tertutup. Untuk backtest, mid diproksikan dengan Open. Bila laba kotor ≤ 0, rasio dilaporkan "tidak terdefinisi" (bukan dipaksakan).
 8. **Exit tetap diproses** saat kill switch, daily loss limit, atau spread >2% (dicatat sebagai event). Bila order book kosong atau kedalaman kurang, exit ditunda dan dicoba ulang di panggilan berikutnya.
+
+## Hasil uji universe point-in-time (dijalankan 14 Nov 2026)
+
+`scripts/universe_selection.py --asof 2023-11-04 --top 4` → `data/universe_selection.json`. Peringkat median nilai transaksi IDR harian, 30 hari sebelum 4 Nov 2023: USDTIDR, BTCIDR, ETHIDR, XRPIDR, DOGEIDR, SOLIDR, dan seterusnya. Universe bot (BTC, ETH, XRP, DOGE) = peringkat 2–5, yaitu 4 teratas tanpa stablecoin. Pengecualian stablecoin dirumuskan ex post; lihat REFLEKSI.md bagian 5 poin 7.

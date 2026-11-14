@@ -1,0 +1,2208 @@
+{
+  "asof": "2023-11-04",
+  "window_days": 30,
+  "measured_at": "2026-11-14T12:47:54Z",
+  "rule": "median nilai transaksi IDR harian (Volume*Close) 30 hari sebelum asof; wajib ada data >= 29 hari; ambil top 4",
+  "selected": [
+    "USDTIDR",
+    "BTCIDR",
+    "ETHIDR",
+    "XRPIDR"
+  ],
+  "ranking": [
+    {
+      "pair": "USDTIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 31976792219.94449
+    },
+    {
+      "pair": "BTCIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 11838790206.731806
+    },
+    {
+      "pair": "ETHIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 3915765163.383215
+    },
+    {
+      "pair": "XRPIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 3603138215.787021
+    },
+    {
+      "pair": "DOGEIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 1816646656.7321548
+    },
+    {
+      "pair": "SOLIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 938299770.2443287
+    },
+    {
+      "pair": "TRXIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 900864715.9023094
+    },
+    {
+      "pair": "ADAIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 837083375.6516515
+    },
+    {
+      "pair": "BNBIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 671168651.1286206
+    },
+    {
+      "pair": "STIKIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 628592369.8013582
+    },
+    {
+      "pair": "USDCIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 524750619.5805167
+    },
+    {
+      "pair": "VELOIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 455833503.5575329
+    },
+    {
+      "pair": "LTCIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 331098577.17339
+    },
+    {
+      "pair": "DOTIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 241901726.65137458
+    },
+    {
+      "pair": "LINKIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 216046413.92934048
+    },
+    {
+      "pair": "HBARIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 185826608.19160214
+    },
+    {
+      "pair": "ZILIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 160925911.3288765
+    },
+    {
+      "pair": "ORBSIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 122867685.15549272
+    },
+    {
+      "pair": "SANDIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 120676651.29547656
+    },
+    {
+      "pair": "GRTIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 79911952.77597904
+    },
+    {
+      "pair": "WAVESIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 77096821.780218
+    },
+    {
+      "pair": "WEMIXIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 71618820.95468357
+    },
+    {
+      "pair": "AVAXIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 64526000.059648484
+    },
+    {
+      "pair": "MANAIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 64456942.79075479
+    },
+    {
+      "pair": "DEPIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 62402770.67996839
+    },
+    {
+      "pair": "HOTIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 60743832.57866394
+    },
+    {
+      "pair": "ATOMIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 57140556.69736016
+    },
+    {
+      "pair": "METAIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 54313126.42640323
+    },
+    {
+      "pair": "ALGOIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 51228506.748721905
+    },
+    {
+      "pair": "DGBIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 50114256.849868014
+    },
+    {
+      "pair": "CKBIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 40055386.9721782
+    },
+    {
+      "pair": "ETCIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 38515041.8338615
+    },
+    {
+      "pair": "FILIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 38049135.820540875
+    },
+    {
+      "pair": "UNIIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 33386096.269946452
+    },
+    {
+      "pair": "NEARIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 30661399.886533953
+    },
+    {
+      "pair": "TELIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 29835666.43653608
+    },
+    {
+      "pair": "QNTIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 28663307.9158357
+    },
+    {
+      "pair": "CELRIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 26407568.23456899
+    },
+    {
+      "pair": "GALAIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 26191894.8254254
+    },
+    {
+      "pair": "OGNIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 25050855.025112398
+    },
+    {
+      "pair": "ENJIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 24565563.153523926
+    },
+    {
+      "pair": "CRVIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 23326816.85787283
+    },
+    {
+      "pair": "ACTIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 21369367.603461504
+    },
+    {
+      "pair": "APEIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 20608093.845391795
+    },
+    {
+      "pair": "EGLDIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 18613578.01479192
+    },
+    {
+      "pair": "TENIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 17542037.325494662
+    },
+    {
+      "pair": "CAKEIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 17274517.099205233
+    },
+    {
+      "pair": "VETIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 17186207.651876703
+    },
+    {
+      "pair": "KDAGIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 16909027.547253493
+    },
+    {
+      "pair": "CHZIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 16849335.05936018
+    },
+    {
+      "pair": "COMPIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 16789077.40572278
+    },
+    {
+      "pair": "VEXIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 16648348.768707365
+    },
+    {
+      "pair": "INJIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 16367484.89318151
+    },
+    {
+      "pair": "ANKRIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 14510742.24562188
+    },
+    {
+      "pair": "WLDIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 14028101.42095317
+    },
+    {
+      "pair": "XTZIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 13569017.98072112
+    },
+    {
+      "pair": "CROIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 13409172.11048962
+    },
+    {
+      "pair": "AXSIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 12826765.89295001
+    },
+    {
+      "pair": "RVNIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 12802981.920537455
+    },
+    {
+      "pair": "TMGIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 12623281.968101472
+    },
+    {
+      "pair": "AMPIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 12261186.96356164
+    },
+    {
+      "pair": "NRGIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 12253424.465757795
+    },
+    {
+      "pair": "JASMYIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 12041172.39446282
+    },
+    {
+      "pair": "GNOIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 11973872.15920699
+    },
+    {
+      "pair": "SFIIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 11734142.54195824
+    },
+    {
+      "pair": "LQTYIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 11501004.1843297
+    },
+    {
+      "pair": "ACHIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 11164477.253595084
+    },
+    {
+      "pair": "ZRXIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 10456805.325964216
+    },
+    {
+      "pair": "ALICEIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 9467416.219897568
+    },
+    {
+      "pair": "SUSHIIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 9303436.746518351
+    },
+    {
+      "pair": "IOTAIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 9020886.497481659
+    },
+    {
+      "pair": "GMTIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 8954328.32494561
+    },
+    {
+      "pair": "ALTIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 8922955.385642355
+    },
+    {
+      "pair": "THETAIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 8230826.518717265
+    },
+    {
+      "pair": "AUDIOIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 7720259.08220358
+    },
+    {
+      "pair": "FLRIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 7700875.585913531
+    },
+    {
+      "pair": "NEOIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 7617029.898293
+    },
+    {
+      "pair": "AIOZIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 7586313.09572196
+    },
+    {
+      "pair": "MCTIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 7461883.497902645
+    },
+    {
+      "pair": "YFIIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 7451590.20548328
+    },
+    {
+      "pair": "CELOIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 7351244.2156569995
+    },
+    {
+      "pair": "SNXIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 6662370.360905901
+    },
+    {
+      "pair": "NBTIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 6515069.6363892695
+    },
+    {
+      "pair": "HNTIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 6409211.7737692
+    },
+    {
+      "pair": "DFGIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 6325242.67352383
+    },
+    {
+      "pair": "COLIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 5984943.856981525
+    },
+    {
+      "pair": "RSRIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 5769224.06770093
+    },
+    {
+      "pair": "KSMIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 5537002.364445015
+    },
+    {
+      "pair": "ENSIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 5467299.47442911
+    },
+    {
+      "pair": "JSTIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 5184573.926177765
+    },
+    {
+      "pair": "IOTXIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 5157436.856029149
+    },
+    {
+      "pair": "API3IDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 4999093.0469383
+    },
+    {
+      "pair": "IOSTIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 4984265.56756147
+    },
+    {
+      "pair": "KNCIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 3994066.656252005
+    },
+    {
+      "pair": "UMAIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 3752787.95501552
+    },
+    {
+      "pair": "VCGIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 3310368.0281552104
+    },
+    {
+      "pair": "XVSIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 3245789.5450570197
+    },
+    {
+      "pair": "FLUXIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 3156524.99988069
+    },
+    {
+      "pair": "HIVEIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 3154439.2199923955
+    },
+    {
+      "pair": "PAXGIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 3154418.12013475
+    },
+    {
+      "pair": "HARTIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 2985521.3010803247
+    },
+    {
+      "pair": "BLURIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 2879969.86140286
+    },
+    {
+      "pair": "TFUELIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 2783227.02676425
+    },
+    {
+      "pair": "BATIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 2762709.363890535
+    },
+    {
+      "pair": "MRSIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 2532103.583791925
+    },
+    {
+      "pair": "SSVIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 2346868.2162289647
+    },
+    {
+      "pair": "IMXIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 2303240.0982557647
+    },
+    {
+      "pair": "WOOIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 2246420.6758574997
+    },
+    {
+      "pair": "C98IDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 2102979.133684685
+    },
+    {
+      "pair": "LPTIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 2063828.3148456248
+    },
+    {
+      "pair": "LDOIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 2013426.93793963
+    },
+    {
+      "pair": "RPLIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 1913439.71818614
+    },
+    {
+      "pair": "SFPIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 1649000.8992726498
+    },
+    {
+      "pair": "TUSDIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 1490806.1673135299
+    },
+    {
+      "pair": "NUSAIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 1404395.36760975
+    },
+    {
+      "pair": "SKLIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 1381955.6612964002
+    },
+    {
+      "pair": "BICOIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 1258948.5070818998
+    },
+    {
+      "pair": "CHRIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 1217217.93269232
+    },
+    {
+      "pair": "CVCIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 1164418.485930725
+    },
+    {
+      "pair": "WBTCIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 1128168.8804514
+    },
+    {
+      "pair": "CTSIIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 1069088.9316829501
+    },
+    {
+      "pair": "ONTIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 924422.2501541399
+    },
+    {
+      "pair": "XAUTIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 897025.57710422
+    },
+    {
+      "pair": "OKBIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 791988.378025
+    },
+    {
+      "pair": "STGIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 728022.65882369
+    },
+    {
+      "pair": "GTCIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 709353.9216752851
+    },
+    {
+      "pair": "CVXIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 528187.52683131
+    },
+    {
+      "pair": "GLMIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 479539.71809888503
+    },
+    {
+      "pair": "MASKIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 395944.89833738003
+    },
+    {
+      "pair": "HIGHIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 274024.879483155
+    },
+    {
+      "pair": "RLCIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 256623.96620621
+    },
+    {
+      "pair": "LEOIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 100200.61072557
+    },
+    {
+      "pair": "NEXOIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 36560.008690575
+    },
+    {
+      "pair": "BCHIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "LUNAIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "LYFEIDR",
+      "days_with_data": 30,
+      "median_daily_idr_value": 0.0
+    }
+  ],
+  "excluded_or_no_data": [
+    {
+      "pair": "1INCHIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "AAPLXIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "AAVEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ABIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ACEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ACNIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ACSIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "AEROIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "AEVOIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "AGIIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "AIHIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "AIIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "AIXBTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ALEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ALLOIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "AMZNXIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ANIMEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ANOAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "APEXIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "APUIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ARBIDR",
+      "days_with_data": 9,
+      "median_daily_idr_value": 278807092.655089
+    },
+    {
+      "pair": "ARCIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ARKMIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ASETQUIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ASTERIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ATHIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "AUCTIONIDR",
+      "days_with_data": 23,
+      "median_daily_idr_value": 20093262.486425
+    },
+    {
+      "pair": "AUGURIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "AUSDIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "AVAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "AVNTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "AXLIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "AZTECIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "B2IDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BANANAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BANANAS31IDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BANDIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BANIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BANKIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BEAMIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BEATIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BGBIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BIOIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BIRBIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BMTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BNKRIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BOMEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BONKIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BPIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BRETTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BRIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "BSVIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "CASTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "CATIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "CATIIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "CGPTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "CHEEMSIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "CHILLGUYIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "CJLIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "CNGIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "COINXIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "CONXIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "COWIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "CRCLXIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "CREAMIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "CROAKIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "CSTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "CTCIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "CTKIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "CYBERIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "DEGENIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "DEXEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "DODOIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "DOGSIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "DRXIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "DUSKIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "EDENAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "EDENIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "EIGENIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ENAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "EPICIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ESPIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ETHFIIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "FANCIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "FARTCOINIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "FETIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "FFIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "FLOKIIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "FORMIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "FUELIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "FUNIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "GAMEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "GENIUSIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "GIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "GIGAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "GIGGLEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "GLIDRIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "GMXIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "GNSIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "GOATIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "GOIDRIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "GOOGLXIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "GPSIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "GRASSIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "GRIFFAINIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "GWEIIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "HAEDALIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "HFTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "HIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "HMSTRIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "HOMEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "HUMAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "HYPEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "HYPERIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ICNTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ICPIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "IDIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "IDRTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "IDRXIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ILVIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "INDRIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "IOIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "IQIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ISLMIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "JELLYJELLYIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "JOEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "JTOIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "JUPIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "KAIAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "KAITOIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "KERNELIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "KITEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "KMNOIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "KOMAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "KTAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "L3IDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "LINEAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "LISTAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "LITIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "LSKIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "LUNCIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MAGICIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MANTAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MARSCOINIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MAVIAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MAVIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MELANIAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MEMEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "METIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "METISIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MEWIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MITOIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MNTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MOCAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MOGIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MOLTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MONIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MOODENGIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MORPHOIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MOVEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MPROIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MTCIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MUBARAKIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MYROIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "MYXIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "NEIROIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "NEOIDRIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "NEONIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "NEWTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "NIGHTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "NMDIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "NMRIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "NOMIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "NOVAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "NPCIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "NVDAXIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "NXAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "OKUSDIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ONDOIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ONLIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "OPIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ORCAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ORDERIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PAYAIIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PENDLEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PENGUIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PEOPLEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PEPEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PHAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PIEVERSEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PIPPINIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PIXELIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PLPAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PLUMEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PMIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PNUTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "POLIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "POLSIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PONDIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PONKEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "POPCATIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PORTALIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "POWRIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PRIMEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PROMIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PROVEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PUFFERIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PUMPIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "PYTHIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "RADIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "RAREIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "RAYIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "REDIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "RENDERIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "REQIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "REZIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "RIVERIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SAFEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SAHARAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SAPIENIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SENTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SHELLIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SHIBIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SHOWIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SIGNIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SKRIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SKYAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SKYAIIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SKYIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SNIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SNTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SOLAYERIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SOLVIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SOMIIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SOONIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SPELLIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SPKIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SPXIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SQDIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "STOIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "STREAMIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "STRKIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SUIIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SUNDOGIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SUNIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SUPERIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SXTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "SYRUPIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "TAGIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "TAIKOIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "TIAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "TIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "TLMIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "TNSRIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "TOKENIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "TONIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "TOSHIIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "TRACIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "TRBIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "TRIAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "TROLLSOLIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "TRUMPIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "TSLAXIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "TURBOIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "TURTLEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "UAIIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "UBIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "UCJLIDR",
+      "days_with_data": 9,
+      "median_daily_idr_value": 19375677.125779998
+    },
+    {
+      "pair": "UNMDIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "USATIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "USDXIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "USELESSIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "VANRYIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "VELOFINIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "VELVETIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "VINEIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "VIRTUALIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "VVVIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "W3FIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "W3SIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "WCTIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "WEALTHIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "WIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "WIFIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "WLFIIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "XCNIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "XDCIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "XLMIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "XPLIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "XRIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "YGGIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ZAMAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ZBCNIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ZENIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ZEREBROIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ZKCIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ZKJIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ZORAIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    },
+    {
+      "pair": "ZROIDR",
+      "days_with_data": 0,
+      "median_daily_idr_value": 0.0
+    }
+  ],
+  "candidates_source": "https://indodax.com/api/pairs (+ data/extra_candidates.txt)",
+  "limitation": "pair yang sudah delisting tidak muncul di /api/pairs"
+}

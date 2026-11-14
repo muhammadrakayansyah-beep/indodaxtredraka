@@ -80,4 +80,9 @@ Uptime 60% **bukan** gangguan Indodax atau Vercel. Candle 4–7 Nov tidak dipros
 4. **Kalibrasi biaya ditentukan ex post** (14 Nov), dengan aturan cutoff yang ditetapkan sebelum melihat hasil backtest. Snapshot berasal dari dalam periode forward resmi.
 5. **Sampel backtest kecil:** 12 trade dalam 3 tahun. Win rate 100% tidak bermakna secara statistik, dan strategi tidak punya stop loss sehingga satu trade buruk bisa menghapus banyak trade untung. Max drawdown −1% kecil karena eksposur rendah (10% per posisi, jarang memegang posisi), bukan karena strategi ini aman.
 6. **Fee all-in 0,2222%** belum diverifikasi ulang dari halaman resmi Indodax (lihat `FEES_SOURCES.md`). `/api/pairs` menunjukkan 0,2%.
-7. **Universe:** lihat `data/universe_selection.json` untuk hasil uji point-in-time (likuiditas 30 hari sebelum 4 Nov 2023).
+7. **Universe (uji point-in-time, `data/universe_selection.json`).** Likuiditas diukur sebagai median nilai transaksi IDR harian (Volume × Close) selama 30 hari sebelum 4 Nov 2023, awal backtest. Dari 438 pair IDR di `/api/pairs`, 136 punya data cukup pada periode itu; tidak ada error fetch. Peringkatnya: USDTIDR (Rp31,98 miliar/hari), **BTCIDR** (11,84 miliar), **ETHIDR** (3,92 miliar), **XRPIDR** (3,60 miliar), **DOGEIDR** (1,82 miliar), SOLIDR (0,94 miliar).
+   - Aturan mekanis "4 teratas" memilih USDT, BTC, ETH, XRP, **berbeda** dari universe bot.
+   - Universe bot sama persis dengan peringkat 2–5, yaitu 4 teratas setelah stablecoin dikeluarkan. Stablecoin yang dipatok ke USD tidak cocok untuk strategi mean reversion berbasis tren.
+   - Pengecualian stablecoin **tidak tertulis** sebelum backtest; kriteria ini dirumuskan saat uji dijalankan (14 Nov), jadi bersifat ex post.
+   - Uji ini juga baru dijalankan setelah forward test, dan `/api/pairs` tidak memuat pair yang sudah delisting, sehingga survivorship bias tidak sepenuhnya tertutup.
+   - Universe tidak diubah setelah forward test.
