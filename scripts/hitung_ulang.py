@@ -53,7 +53,8 @@ def compute(offline, now=None):
     bt_path = _lib.p("data", "backtest_full.json")
     bt = json.load(open(bt_path)) if os.path.exists(bt_path) else None
     candles = load_candles(offline, now) if calib else {}
-    return M.compute_all(raw, candles, calib, bt, now)
+    bt_orders = M.load_backtest_orders(_lib.p("data", "backtest_full_orders.csv"))
+    return M.compute_all(raw, candles, calib, bt, now, bt_orders)
 
 
 def canon(x):

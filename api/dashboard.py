@@ -38,7 +38,8 @@ def build():
         for p in C.UNIVERSE:
             candles[p] = API.closed_only(API.history(p, C.TIMEFRAME, frm, to), now, C.TF_SECONDS)
             time.sleep(0.4)
-    D = M.compute_all(raw, candles, calib, bt_full, now)
+    bt_orders = M.load_backtest_orders(os.path.join(ROOT, "data", "backtest_full_orders.csv"))
+    D = M.compute_all(raw, candles, calib, bt_full, now, bt_orders)
     return R.render(D)
 
 

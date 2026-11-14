@@ -6,7 +6,7 @@
     },
     "api/dashboard.py": {
       "maxDuration": 120,
-      "includeFiles": "{bot/**,data/*.json}"
+      "includeFiles": "{bot/**,data/*.json,data/*.csv}"
     }
   },
   "crons": [

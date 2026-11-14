@@ -202,7 +202,79 @@ def fill_gaps(live_orders, same_window_orders):
     return rows
 
 
-def compute_all(raw, candles, calib, backtest_full, now_ts):
+def load_backtest_orders(path):
+    """Baca data/backtest_full_orders.csv (hasil scripts/backtest.py) apa adanya."""
+    import csv
+    import os
+    if not os.path.exists(path):
+        return None
+    out = []
+    with open(path, newline="") as f:
+        for r in csv.DictReader(f):
+            row = {}
+            for k, v in r.items():
+                if v in ("", None):
+                    row[k] = None
+                    continue
+                try:
+                    row[k] = float(v)
+                except ValueError:
+                    row[k] = v
+            out.append(row)
+    return out
+
+
+def execution_probe(snapshots, start, end):
+    """Uji eksekusi (BUKAN trade): order sebesar ukuran posisi strategi disimulasikan
+    menyapu snapshot order book asli terakhir di jendela forward."""
+    size = C.MAX_POSITION_FRACTION * C.INITIAL_CAPITAL_IDR / (1 + C.TAKER_FEE)
+    out = []
+    for p in C.UNIVERSE:
+        ss = [s for s in snapshots if s["pair"] == p and start <= s["ts_unix"] <= end and s["bids"] and s["asks"]]
+        if not ss:
+            out.append({"pair": p, "snapshot_ts": None})
+            continue
+        s = ss[-1]
+        book = {"bids": s["bids"], "asks": s["asks"]}
+        st = X.book_stats(book)
+        buy = X.sweep_buy_idr(book["asks"], size)
+        sell = X.sweep_sell_qty(book["bids"], buy["qty"]) if buy else None
+        row = {"pair": p, "snapshot_ts": s["ts"], "order_idr": size, "best_bid": st["best_bid"],
+               "best_ask": st["best_ask"], "spread_pct": st["spread_pct"]}
+        if buy:
+            row.update(buy_qty=buy["qty"], buy_vwap=buy["vwap"], buy_levels=buy["levels"],
+                       buy_slip_pct=(buy["vwap"] - st["best_ask"]) / st["best_ask"],
+                       buy_fee=buy["notional"] * C.TAKER_FEE)
+        if sell:
+            row.update(sell_vwap=sell["vwap"], sell_levels=sell["levels"],
+                       sell_slip_pct=(st["best_bid"] - sell["vwap"]) / st["best_bid"],
+                       sell_fee=sell["notional"] * C.TAKER_FEE,
+                       roundtrip_cost_idr=(buy["notional"] * C.TAKER_FEE + sell["notional"] * C.TAKER_FEE
+                                           + buy["notional"] - sell["notional"]),
+                       roundtrip_cost_pct=(buy["notional"] * C.TAKER_FEE + sell["notional"] * C.TAKER_FEE
+                                           + buy["notional"] - sell["notional"]) / buy["notional"])
+        out.append(row)
+    return out
+
+
+def latest_signals(signals):
+    """Sinyal terakhir per pair beserta syarat entry, untuk menjelaskan BUY/HOLD."""
+    out = []
+    for p in C.UNIVERSE:
+        ss = [s for s in signals if s["pair"] == p and s.get("ind")]
+        if not ss:
+            out.append({"pair": p})
+            continue
+        s = max(ss, key=lambda x: x["candle_time"])
+        i = s["ind"]
+        out.append({"pair": p, "candle_time": iso(s["candle_time"]), "action": s["action"], "rsi": i["rsi"],
+                    "close": i["close"], "sma_fast": i["sma_fast"], "sma_slow": i["sma_slow"],
+                    "cond_rsi": i["rsi"] < C.RSI_ENTRY_BELOW, "cond_close_sma200": i["close"] > i["sma_slow"],
+                    "cond_sma50_sma200": i["sma_fast"] > i["sma_slow"]})
+    return out
+
+
+def compute_all(raw, candles, calib, backtest_full, now_ts, backtest_orders=None):
     """raw: {stream: [records]} log mentah. candles: {pair: [...]} dari Indodax yang
     mencakup jendela forward + INDICATOR_WINDOW. backtest_full: hasil scripts/backtest.py."""
     start, end = forward_window()
@@ -294,6 +366,9 @@ def compute_all(raw, candles, calib, backtest_full, now_ts):
         "ops": ops,
         "spread_comparison": spread_cmp,
         "orders": orders,
+        "backtest_orders": backtest_orders,
+        "execution_probe": execution_probe(snaps, start, end),
+        "latest_signals": latest_signals(signals),
         "events_sample": events[-50:],
         "errors_sample": errors[-50:],
     }

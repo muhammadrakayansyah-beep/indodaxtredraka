@@ -187,7 +187,16 @@ semua angka dihasilkan oleh <code>scripts/hitung_ulang.py</code> dari log mentah
                              {True: "ya", False: "TIDAK", None: "-"}[r["match"]], r["live_reason"] or "",
                              r["backtest_reason"] or ""] for r in sm["rows"]]) + "</section>")
 
-    parts.append("<section><h2>Order simulasi (forward)</h2>" +
+    yn = {True: "ya", False: "tidak", None: "-"}
+    ls = D.get("latest_signals") or []
+    no_fwd = "" if D.get("orders") else (
+        "<p class='empty'>Tidak ada order forward: syarat entry (RSI(4) &lt; 10, close &gt; SMA200, "
+        "SMA50 &gt; SMA200) tidak pernah terpenuhi bersamaan pada candle yang diproses. "
+        "Tabel di bawah adalah sinyal terakhir per pair dari log.</p>" +
+        table(["Pair", "Candle", "Aksi", "RSI(4)", "RSI<10", "Close>SMA200", "SMA50>SMA200"],
+              [[r["pair"], r.get("candle_time", NA), r.get("action", NA), num(r.get("rsi"), 1),
+                yn[r.get("cond_rsi")], yn[r.get("cond_close_sma200")], yn[r.get("cond_sma50_sma200")]] for r in ls]))
+    parts.append("<section><h2>Order simulasi (forward)</h2>" + no_fwd +
                  table(["Waktu", "Pair", "Sisi", "Qty", "Best bid", "Best ask", "Avg fill", "Fee", "Harga sinyal", "Selisih vs sinyal", "P/L"],
                        [[o["ts"], o["pair"], o["side"], num(o["qty"], 8), num(o["best_bid"], 0), num(o["best_ask"], 0),
                          num(o["avg_fill"], 2), rp(o["fee"]), num(o["signal_price"], 0), pct(o["diff_vs_signal_pct"], 3),
@@ -199,6 +208,30 @@ semua angka dihasilkan oleh <code>scripts/hitung_ulang.py</code> dari log mentah
                          num(r["delay_from_candle_close_s"] / 60, 1) if r.get("delay_from_candle_close_s") is not None else NA,
                          num(r.get("backtest_fill"), 2) if r.get("backtest_fill") else NA, pct(r.get("fill_gap_pct"), 3)]
                         for r in D.get("fill_gaps") or []]) + "</section>")
+
+    ep = D.get("execution_probe") or []
+    parts.append("<section><h2>Uji eksekusi di order book asli</h2>"
+                 "<p class='muted'>Bukan trade dan tidak memengaruhi ekuitas. Order sebesar ukuran posisi strategi "
+                 "(10% modal) disimulasikan menyapu snapshot order book terakhir di jendela forward: beli di ask, "
+                 "jual kembali di bid, termasuk fee taker. Menunjukkan biaya eksekusi nyata bila sinyal muncul.</p>" +
+                 table(["Pair", "Snapshot (UTC)", "Order", "Best bid", "Best ask", "Spread", "VWAP beli", "Slip beli",
+                        "VWAP jual", "Slip jual", "Level beli/jual", "Biaya bolak-balik"],
+                       [[r["pair"], r.get("snapshot_ts") or NA, rp(r.get("order_idr")), num(r.get("best_bid"), 0),
+                         num(r.get("best_ask"), 0), pct(r.get("spread_pct"), 4), num(r.get("buy_vwap"), 2),
+                         pct(r.get("buy_slip_pct"), 4), num(r.get("sell_vwap"), 2), pct(r.get("sell_slip_pct"), 4),
+                         f"{r.get('buy_levels', '-')}/{r.get('sell_levels', '-')}",
+                         f"{rp(r.get('roundtrip_cost_idr'))} ({pct(r.get('roundtrip_cost_pct'), 3)})"]
+                        for r in ep if r.get("snapshot_ts")]) + "</section>")
+
+    bo = D.get("backtest_orders") or []
+    parts.append("<section><h2>Order simulasi backtest (3 tahun)</h2>"
+                 "<p class='muted'>Dari <code>data/backtest_full_orders.csv</code> (scripts/backtest.py): "
+                 "eksekusi di Open candle berikutnya ± half-spread + slippage hasil kalibrasi, fee taker.</p>" +
+                 table(["Tanggal (UTC)", "Pair", "Sisi", "Alasan", "Harga sinyal", "Open", "Harga fill", "Qty", "Fee", "P/L"],
+                       [[str(o.get("time", ""))[:10], o.get("pair"), o.get("side"), o.get("reason"),
+                         num(o.get("signal_price"), 0), num(o.get("open"), 0), num(o.get("price"), 2),
+                         num(o.get("qty"), 8), rp(o.get("fee")),
+                         rp(o.get("realized_pnl")) if o.get("side") == "SELL" else ""] for o in bo]) + "</section>")
 
     sc = D.get("spread_comparison") or {}
     rows = []
