@@ -122,7 +122,16 @@ def render(D):
     if not bf:
         banner.append("Backtest penuh belum ada (data/backtest_full.json tidak ditemukan atau kalibrasi belum valid).")
     if not D.get("orders"):
-        banner.append("Belum ada order simulasi pada jendela forward.")
+        rows = (D.get("signal_match") or {}).get("rows") or []
+        any_buy = any(r.get("live") == "BUY" for r in rows)
+        if D.get("forward_complete") and not any_buy:
+            banner.append("Forward test selesai dengan 0 order: syarat entry (RSI(4) < 10, close > SMA200, "
+                          "SMA50 > SMA200) tidak pernah terpenuhi bersamaan, jadi tidak ada sinyal BUY. "
+                          "Log lengkap; lihat panel Order simulasi.")
+        elif D.get("forward_complete"):
+            banner.append("Forward test selesai dengan 0 order: sinyal BUY ada tetapi diblokir (lihat event entry_blocked).")
+        else:
+            banner.append("Belum ada order simulasi: syarat entry belum terpenuhi pada candle yang sudah diproses.")
     logo = logo_data_uri()
     logo_html = f'<span class="logo"><img src="{logo}" alt="rakahtrade"></span>' if logo else ""
     brand = (f'<div class="brand">{logo_html}<div class="author"><div class="nm">{esc(AUTHOR_NAME)}</div>'
