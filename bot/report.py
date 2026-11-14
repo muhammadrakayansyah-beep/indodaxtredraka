@@ -1,8 +1,23 @@
 """Render dashboard HTML mandiri (tanpa internet, tanpa library luar) dari output
 bot.metrics.compute_all. Dipakai untuk dashboard.html offline dan /api/dashboard.
 Tidak ada angka yang ditulis manual: semua berasal dari dict `D`."""
+import base64
 import html
 import json
+import os
+
+AUTHOR_NAME = "Muhammad Rakah Yansyah"
+AUTHOR_ID = "25120200002"
+_LOGO_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "logo.png")
+
+
+def logo_data_uri():
+    """Logo disematkan sebagai data URI agar dashboard offline tetap mandiri."""
+    try:
+        with open(_LOGO_PATH, "rb") as f:
+            return "data:image/png;base64," + base64.b64encode(f.read()).decode()
+    except OSError:
+        return None
 
 NA = "BELUM ADA DATA"
 
@@ -86,7 +101,10 @@ CSS = """
 section{margin:14px 0}.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
 th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}th{color:var(--muted);font-weight:600}
 svg{width:100%;height:180px;display:block}.empty{color:var(--warn)}code{font-size:13px}
-@media(max-width:600px){.value{font-size:18px}}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.logo{background:#fff;border-radius:10px;padding:6px 10px;display:inline-flex;border:1px solid var(--line)}.logo img{height:40px;width:auto;display:block}
+.author{text-align:right}.author .nm{font-weight:700;font-size:15px}.author .id{color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+@media(max-width:600px){.value{font-size:18px}.author{text-align:left}.logo img{height:32px}}
 """
 
 
@@ -105,10 +123,14 @@ def render(D):
         banner.append("Backtest penuh belum ada (data/backtest_full.json tidak ditemukan atau kalibrasi belum valid).")
     if not D.get("orders"):
         banner.append("Belum ada order simulasi pada jendela forward.")
+    logo = logo_data_uri()
+    logo_html = f'<span class="logo"><img src="{logo}" alt="rakahtrade"></span>' if logo else ""
+    brand = (f'<div class="brand">{logo_html}<div class="author"><div class="nm">{esc(AUTHOR_NAME)}</div>'
+             f'<div class="id">NIM {esc(AUTHOR_ID)}</div></div></div>')
     parts = [f"""<!doctype html><html lang="id"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>Dashboard Dry Run Indodax</title>
 <style>{CSS}</style></head><body><main class="wrap">
-<h1>Dashboard Dry Run Indodax</h1>
+{brand}<h1>Dashboard Dry Run Indodax</h1>
 <div class="muted">Strategi {esc(D.get('strategy_version'))} · universe {esc(', '.join(D.get('universe', [])))} ·
 jendela forward {esc(f.get('start'))} s/d {esc(f.get('end'))} (UTC) · dihitung {esc(D.get('generated_for_now'))} ·
 semua angka dihasilkan oleh <code>scripts/hitung_ulang.py</code> dari log mentah.</div>"""]
