@@ -1,6 +1,6 @@
 # Bot Dry Run Indodax di Vercel (UAS Algoritma Trading)
 
-Bot trading **dry run** (order simulasi, tanpa uang sungguhan, tanpa API key). Bot membaca candle dan order book **asli** dari API publik Indodax, mengeksekusi simulasi di bid/ask dengan menyapu level order book, lalu menyimpan setiap keputusan ke Upstash Redis. Bot berjalan sebagai endpoint Vercel `/api/tick`.
+Bot trading **dry run** (order simulasi, tanpa uang sungguhan, tanpa API key). Bot membaca candle dan order book **asli** dari API publik Indodax, mengeksekusi simulasi di bid/ask dengan menyapu level order book, lalu menyimpan setiap keputusan ke Vercel Blob. Bot berjalan sebagai endpoint Vercel `/api/tick`.
 
 - Strategi: lihat [STRATEGI.md](STRATEGI.md) (Mean Reversion RSI(4) < 10 + filter SMA50/200, harian, long-only).
 - Status freeze: lihat [FREEZE.md](FREEZE.md). **Belum ada commit freeze yang sah.**
@@ -13,7 +13,9 @@ Hanya memakai **standard library Python 3.9+**. Tidak ada dependensi pihak ketig
 
 - Dashboard: https://indodax-dryrun.vercel.app (project Vercel `indodax-dryrun`, team `rakk`)
 - Storage: Vercel Blob `indodax-dryrun-store` (sin1); env `BLOB_READ_WRITE_TOKEN` terpasang otomatis
-- Penjadwal: 8 Vercel Cron harian (00:17, 03:17, …, 21:17 UTC = setiap 3 jam). Pembatasan Hobby sekali sehari berlaku per job, jadi bot tetap dipanggil 8× sehari tanpa GitHub Actions. Workflow `.github/workflows/tick.yml` opsional.
+- Repositori: https://github.com/muhammadrakayansyah-beep/indodaxtredraka. Project Vercel terhubung ke repo ini: setiap push ke `main` otomatis di-deploy ke production.
+- Penjadwal: 8 Vercel Cron harian (00:17, 03:17, …, 21:17 UTC = setiap 3 jam), didefinisikan di `vercel.json`. Batas Hobby "sekali sehari" berlaku per job, jadi bot tetap dipanggil 8× sehari tanpa penjadwal luar.
+- Setiap deploy di dalam jendela forward dicatat di log bot sebagai event `bugfix_note` (`scripts/log_bugfix.py`).
 - Bot pertama kali dipanggil 2026-11-09T04:01Z. Jendela di `bot/config.py` masih jadwal resmi (4–14 Nov), sehingga candle 5–8 Nov tercatat **tidak diproses** pada uptime. Itu fakta, bukan bug.
 - Kill switch tanpa redeploy: isi `BLOB_READ_WRITE_TOKEN` di `.env` lalu jalankan `python scripts/kill_switch.py on`, atau unggah `kv/kill_switch.json` berisi `1` lewat Vercel → Storage.
 
@@ -36,19 +38,24 @@ scripts/              fetch_history, collect_snapshots, calibrate_costs, univers
                       backtest, export_logs, hitung_ulang, kill_switch, reset_state,
                       log_bugfix, freeze_manifest, smoke_test
 tests/test_core.py    unit test (sinyal, candle tertutup, sweep, auth, idempotency, kill switch, retry)
-.github/workflows/tick.yml  penjadwal per jam (menit ke-17)
+vercel.json           konfigurasi fungsi + 8 cron harian
+.vercelignore         berkas yang tidak ikut deploy
+bot/assets/logo.png   logo dashboard (disematkan sebagai data URI)
+data/                 calibration.json, backtest_full.json, backtest_full_orders.csv,
+                      raw/ (log mentah forward), dashboard_data.json
+dashboard.html        dashboard offline mandiri (hasil hitung_ulang.py)
 ```
 
 ## Alur data dan log
 
 Setiap panggilan `/api/tick`:
-1. mengambil lock Redis (`SET NX EX 240`); panggilan paralel dicatat sebagai `skipped_locked`;
+1. mengambil lock storage (Blob: `lock.json` dibuat tanpa overwrite; Redis: `SET NX EX 240`); panggilan paralel dicatat sebagai `skipped_locked`;
 2. membaca `server_time` Indodax, lalu membuang candle dengan `Time + 86400 > server_time`;
-3. membaca kill switch (key Redis `indodax-dryrun:kill_switch` atau env `KILL_SWITCH`);
+3. membaca kill switch (Blob `kv/kill_switch.json` / key Redis `indodax-dryrun:kill_switch`, atau env `KILL_SWITCH`);
 4. mengambil order book semua pair dan menyimpan **snapshot mentah** (50 level per sisi);
 5. menandai ekuitas pada **best bid**. Panggilan pertama setelah 00:00 WIB menulis `equity_daily` dan mereset batas daily loss;
 6. untuk tiap pair: memproses candle tertutup terbaru **hanya sekali** (`last_processed`), memvalidasi data, memanggil `strategy.evaluate`, lalu mengeksekusi simulasi;
-7. menulis log ke stream Redis: `calls`, `signals`, `orders`, `equity_daily`, `errors`, `events`, `snapshots`.
+7. menulis log (Blob: satu berkas `logs/<UTC>-<id>.json` per panggilan) dengan stream `calls`, `signals`, `orders`, `equity_daily`, `errors`, `events`, `snapshots`.
 
 Setiap order mencatat waktu, pair, sisi, qty, best bid/ask, mid, VWAP fill, fee, harga sinyal, selisih terhadap sinyal, jumlah level yang tersapu, dan biaya spread+slippage.
 
@@ -64,17 +71,16 @@ LOCAL_STORE=/tmp/bot.json python -c "from bot import engine, storage; print(engi
 
 ## Deploy ke Vercel
 
-1. Push repositori ke GitHub (**publik**), lalu import di Vercel (Framework: Other).
+1. Push repositori ke GitHub (**publik**), lalu import di Vercel (Framework: Other). Setiap push ke `main` otomatis di-deploy.
 2. Vercel → Storage → buat **Blob** store → hubungkan ke project (`BLOB_READ_WRITE_TOKEN` otomatis). Alternatif: Upstash Redis (`UPSTASH_REDIS_REST_URL`/`TOKEN` atau `KV_REST_API_URL`/`TOKEN`).
-3. Vercel → Settings → Environment Variables: `CRON_SECRET` (≥16 karakter acak).
-4. Deploy. `vercel.json` memasang Vercel Cron harian `17 0 * * *` (07:17 WIB) sebagai cadangan.
-5. GitHub → Settings → Secrets and variables → Actions: `BOT_URL` (mis. `https://xxx.vercel.app`) dan `CRON_SECRET`. Workflow `tick-hourly` memanggil bot tiap jam di menit ke-17.
-6. Uji koneksi dari fungsi Vercel (bukti wajib masa persiapan). Isi `.env` lokal (lihat `.env.example`), lalu:
+3. Vercel → Settings → Environment Variables: `CRON_SECRET` (≥16 karakter acak). Vercel Cron otomatis mengirim `Authorization: Bearer <CRON_SECRET>`.
+4. Deploy. `vercel.json` memasang 8 cron harian (setiap 3 jam, menit ke-17).
+5. Uji koneksi dari fungsi Vercel (bukti wajib masa persiapan). Isi `.env` lokal (lihat `.env.example`), lalu:
    ```bash
    python scripts/smoke_test.py
    ```
    Hasilnya: tanpa secret 401, dengan secret 200 dan `server_time` Indodax terbaca. Bukti tersimpan di `data/smoke_test.jsonl`.
-7. Dashboard: `https://xxx.vercel.app/` (atau `/api/dashboard`).
+6. Dashboard: `https://xxx.vercel.app/` (atau `/api/dashboard`).
 
 ## Backtest (di laptop, bukan di Vercel)
 

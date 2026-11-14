@@ -1,9 +1,26 @@
 # Bukti freeze
 
-> **Status per 9 Nov 2026: BELUM ADA commit freeze yang sah.** Freeze resmi soal adalah
-> Rabu 4 Nov 2026 12.00 WIB dan sudah lewat. Repositori ini **tidak boleh** memakai commit yang
-> tanggalnya dimundurkan (`GIT_AUTHOR_DATE`/`GIT_COMMITTER_DATE`), karena itu fabrikasi.
-> Waktu push juga tercatat di GitHub, jadi pemundurannya bisa diaudit.
+> **Status: TIDAK ADA commit freeze yang sah.** Freeze resmi soal adalah Rabu 4 Nov 2026 12.00 WIB.
+> Repositori ini baru dibuat 9 Nov 2026 (`386cfab`, 11.12 WIB) dan bot pertama kali berjalan
+> 2026-11-09T04:01Z (11.01 WIB). Tidak ada commit yang tanggalnya dimundurkan.
+
+## Kronologi aktual (dapat dicek di `git log` dan log bot)
+
+| Waktu (WIB) | Kejadian |
+|---|---|
+| 9 Nov 11.01 | Bot di-deploy ke Vercel dan dipanggil pertama kali (uji koneksi 401/200 lolos) |
+| 9 Nov 11.12 | Commit pertama repositori GitHub |
+| 9–14 Nov | Bot berjalan otomatis 8× sehari (Vercel Cron), state & log di Vercel Blob |
+| 14 Nov 09.47 | Kalibrasi biaya (cutoff 2026-11-10T00:17:24Z) dan backtest 3 tahun |
+| 14 Nov 09.55–10.50 | Beberapa deploy di dalam jendela forward: data backtest untuk dashboard, perapian nama berkas, logo dan nama di dashboard, sinkronisasi struktur repo. Kode sinyal, parameter, dan universe **tidak berubah**. Setiap deploy dicatat sebagai event `bugfix_note` di `data/raw/events.jsonl` |
+| 14 Nov 12.00 | Akhir jendela forward (`FORWARD_END_UTC`) |
+
+Akibat menurut rubrik: komponen kecocokan dapat dinilai 0 karena tidak ada commit freeze
+sebelum forward test. Konsekuensi ini dilaporkan apa adanya di REFLEKSI.md.
+
+Perubahan aturan terakhir sebelum bot berjalan (dicatat di STRATEGI.md, bagian "Catatan implementasi"):
+volume nol diperiksa pada candle keputusan saja, harga referensi take-profit = Open candle setelah sinyal,
+dan jendela indikator tetap 300 candle.
 
 ## Prosedur freeze (dijalankan sekali, pada waktu sebenarnya)
 

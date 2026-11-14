@@ -1,0 +1,6 @@
+.env
+.env.*
+data/candles
+data/raw
+tests
+*.zip
