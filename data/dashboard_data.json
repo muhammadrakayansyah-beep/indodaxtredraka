@@ -1,0 +1,2549 @@
+{
+ "generated_for_now": "2026-11-14T03:17:43Z",
+ "strategy_version": "mr-rsi4-sma200-v1",
+ "universe": [
+  "BTCIDR",
+  "ETHIDR",
+  "XRPIDR",
+  "DOGEIDR"
+ ],
+ "forward_complete": false,
+ "backtest_full": {
+  "eval_from": "2023-11-04T00:00:00Z",
+  "eval_to": "2026-11-03T00:00:00Z",
+  "capital": 100000000.0,
+  "final_equity": 105102975.20782635,
+  "total_return": 0.051029752078263435,
+  "max_drawdown": -0.009998807291252354,
+  "open_positions_at_end": [
+   "ETHIDR"
+  ],
+  "cagr": 0.016724666190960802,
+  "trades": 12,
+  "win_rate": 1.0,
+  "profit_factor": "tak_hingga_tanpa_rugi",
+  "avg_win": 490972.1042776359,
+  "avg_loss": null,
+  "fees_idr": 560311.8331484677,
+  "spread_slippage_idr": 65419.59758051357,
+  "gross_profit_idr": 6517396.68206061,
+  "cost_share_of_gross": 0.0960094131528516,
+  "cost_share_note": null,
+  "benchmark_btc_buy_hold": {
+   "total_return": 1.5738043306155287
+  },
+  "equity_curve_weekly": [
+   {
+    "time": 1699056000,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1699660800,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1700265600,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1700870400,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1701475200,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1702080000,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1702684800,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1703289600,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1703894400,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1704499200,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1705104000,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1705708800,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1706313600,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1706918400,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1707523200,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1708128000,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1708732800,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1709337600,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1709942400,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1710547200,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1711152000,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1711756800,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1712361600,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1712966400,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1713571200,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1714176000,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1714780800,
+    "equity": 100678640.37272707
+   },
+   {
+    "time": 1715385600,
+    "equity": 100678640.37272707
+   },
+   {
+    "time": 1715990400,
+    "equity": 100678640.37272707
+   },
+   {
+    "time": 1716595200,
+    "equity": 100678640.37272707
+   },
+   {
+    "time": 1717200000,
+    "equity": 100678640.37272707
+   },
+   {
+    "time": 1717804800,
+    "equity": 100678640.37272707
+   },
+   {
+    "time": 1718409600,
+    "equity": 101145872.48015136
+   },
+   {
+    "time": 1719014400,
+    "equity": 101145872.48015136
+   },
+   {
+    "time": 1719619200,
+    "equity": 101175317.65431288
+   },
+   {
+    "time": 1720224000,
+    "equity": 101372237.42107242
+   },
+   {
+    "time": 1720828800,
+    "equity": 101594393.67103116
+   },
+   {
+    "time": 1721433600,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1722038400,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1722643200,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1723248000,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1723852800,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1724457600,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1725062400,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1725667200,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1726272000,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1726876800,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1727481600,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1728086400,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1728691200,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1729296000,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1729900800,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1730505600,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1731110400,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1731715200,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1732320000,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1732924800,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1733529600,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1734134400,
+    "equity": 101768726.00953749
+   },
+   {
+    "time": 1734739200,
+    "equity": 101851678.47556555
+   },
+   {
+    "time": 1735344000,
+    "equity": 102345132.39970434
+   },
+   {
+    "time": 1735948800,
+    "equity": 102345132.39970434
+   },
+   {
+    "time": 1736553600,
+    "equity": 102345132.39970434
+   },
+   {
+    "time": 1737158400,
+    "equity": 102345132.39970434
+   },
+   {
+    "time": 1737763200,
+    "equity": 102345132.39970434
+   },
+   {
+    "time": 1738368000,
+    "equity": 102345132.39970434
+   },
+   {
+    "time": 1738972800,
+    "equity": 103334879.66167082
+   },
+   {
+    "time": 1739577600,
+    "equity": 103334879.66167082
+   },
+   {
+    "time": 1740182400,
+    "equity": 103334879.66167082
+   },
+   {
+    "time": 1740787200,
+    "equity": 103118171.58208302
+   },
+   {
+    "time": 1741392000,
+    "equity": 103956116.63435064
+   },
+   {
+    "time": 1741996800,
+    "equity": 103956116.63435064
+   },
+   {
+    "time": 1742601600,
+    "equity": 103956116.63435064
+   },
+   {
+    "time": 1743206400,
+    "equity": 103956116.63435064
+   },
+   {
+    "time": 1743811200,
+    "equity": 103956116.63435064
+   },
+   {
+    "time": 1744416000,
+    "equity": 103956116.63435064
+   },
+   {
+    "time": 1745020800,
+    "equity": 103956116.63435064
+   },
+   {
+    "time": 1745625600,
+    "equity": 103956116.63435064
+   },
+   {
+    "time": 1746230400,
+    "equity": 103956116.63435064
+   },
+   {
+    "time": 1746835200,
+    "equity": 103956116.63435064
+   },
+   {
+    "time": 1747440000,
+    "equity": 103956116.63435064
+   },
+   {
+    "time": 1748044800,
+    "equity": 103956116.63435064
+   },
+   {
+    "time": 1748649600,
+    "equity": 103956116.63435064
+   },
+   {
+    "time": 1749254400,
+    "equity": 103956116.63435064
+   },
+   {
+    "time": 1749859200,
+    "equity": 103956116.63435064
+   },
+   {
+    "time": 1750464000,
+    "equity": 103956116.63435064
+   },
+   {
+    "time": 1751068800,
+    "equity": 104385279.70060481
+   },
+   {
+    "time": 1751673600,
+    "equity": 104385279.70060481
+   },
+   {
+    "time": 1752278400,
+    "equity": 104385279.70060481
+   },
+   {
+    "time": 1752883200,
+    "equity": 104385279.70060481
+   },
+   {
+    "time": 1753488000,
+    "equity": 104385279.70060481
+   },
+   {
+    "time": 1754092800,
+    "equity": 104385279.70060481
+   },
+   {
+    "time": 1754697600,
+    "equity": 105322380.9404839
+   },
+   {
+    "time": 1755302400,
+    "equity": 105514853.88454561
+   },
+   {
+    "time": 1755907200,
+    "equity": 105514853.88454561
+   },
+   {
+    "time": 1756512000,
+    "equity": 105514853.88454561
+   },
+   {
+    "time": 1757116800,
+    "equity": 105514853.88454561
+   },
+   {
+    "time": 1757721600,
+    "equity": 105514853.88454561
+   },
+   {
+    "time": 1758326400,
+    "equity": 105514853.88454561
+   },
+   {
+    "time": 1758931200,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1759536000,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1760140800,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1760745600,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1761350400,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1761955200,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1762560000,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1763164800,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1763769600,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1764374400,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1764979200,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1765584000,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1766188800,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1766793600,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1767398400,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1768003200,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1768608000,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1769212800,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1769817600,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1770422400,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1771027200,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1771632000,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1772236800,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1772841600,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1773446400,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1774051200,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1774656000,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1775260800,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1775865600,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1776470400,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1777075200,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1777680000,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1778284800,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1778889600,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1779494400,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1780099200,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1780704000,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1781308800,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1781913600,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1782518400,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1783123200,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1783728000,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1784332800,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1784937600,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1785542400,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1786147200,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1786752000,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1787356800,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1787961600,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1788566400,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1789171200,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1789776000,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1790380800,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1790985600,
+    "equity": 105891665.25133163
+   },
+   {
+    "time": 1791590400,
+    "equity": 105923839.3253342
+   },
+   {
+    "time": 1792195200,
+    "equity": 105538947.90120606
+   },
+   {
+    "time": 1792800000,
+    "equity": 105463395.14017351
+   },
+   {
+    "time": 1793404800,
+    "equity": 104987507.78058791
+   },
+   {
+    "time": 1793664000,
+    "equity": 105102975.20782635
+   }
+  ],
+  "invalid_signal_count": 7,
+  "blocked_entries": [],
+  "calibration_cutoff": "2026-11-10T00:17:24Z",
+  "calibration_sha256": "c42cab1341ae0f924a06af9bef3d3a304d49c0019a6440f518081c54e6473d21",
+  "candles_meta": {
+   "BTCIDR": {
+    "file": "data/candles/BTCIDR_1D.json",
+    "sha256": "fce0f5de1df2fdc8c463505e6f96222f131fc7af7abef43df8c3b9827bf24dcf",
+    "fetched_at": "2026-11-14T02:39:02Z",
+    "first": "2022-08-01T00:00:00Z",
+    "last": "2026-11-13T00:00:00Z",
+    "gaps": []
+   },
+   "ETHIDR": {
+    "file": "data/candles/ETHIDR_1D.json",
+    "sha256": "a53f6f2151ca0d0207c23a0f07270d95f82401687fb07bec206f3b50f31891d3",
+    "fetched_at": "2026-11-14T02:39:02Z",
+    "first": "2022-08-01T00:00:00Z",
+    "last": "2026-11-13T00:00:00Z",
+    "gaps": []
+   },
+   "XRPIDR": {
+    "file": "data/candles/XRPIDR_1D.json",
+    "sha256": "b0489a45c6e312b60eb44376ffc190ed91b005f3bb2c9fb28c8510067aea646d",
+    "fetched_at": "2026-11-14T02:39:02Z",
+    "first": "2022-08-01T00:00:00Z",
+    "last": "2026-11-13T00:00:00Z",
+    "gaps": []
+   },
+   "DOGEIDR": {
+    "file": "data/candles/DOGEIDR_1D.json",
+    "sha256": "83938c7ce853f0e58b0a095a538cf89cd50fb4e5403e57c22db87ff529310d0f",
+    "fetched_at": "2026-11-14T02:39:02Z",
+    "first": "2022-08-01T00:00:00Z",
+    "last": "2026-11-13T00:00:00Z",
+    "gaps": []
+   }
+  },
+  "fee_rate": 0.002222,
+  "strategy_version": "mr-rsi4-sma200-v1"
+ },
+ "backtest_full_curve": [
+  {
+   "time": 1699056000,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1699660800,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1700265600,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1700870400,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1701475200,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1702080000,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1702684800,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1703289600,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1703894400,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1704499200,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1705104000,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1705708800,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1706313600,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1706918400,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1707523200,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1708128000,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1708732800,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1709337600,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1709942400,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1710547200,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1711152000,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1711756800,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1712361600,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1712966400,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1713571200,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1714176000,
+   "equity": 100000000.0
+  },
+  {
+   "time": 1714780800,
+   "equity": 100678640.37272707
+  },
+  {
+   "time": 1715385600,
+   "equity": 100678640.37272707
+  },
+  {
+   "time": 1715990400,
+   "equity": 100678640.37272707
+  },
+  {
+   "time": 1716595200,
+   "equity": 100678640.37272707
+  },
+  {
+   "time": 1717200000,
+   "equity": 100678640.37272707
+  },
+  {
+   "time": 1717804800,
+   "equity": 100678640.37272707
+  },
+  {
+   "time": 1718409600,
+   "equity": 101145872.48015136
+  },
+  {
+   "time": 1719014400,
+   "equity": 101145872.48015136
+  },
+  {
+   "time": 1719619200,
+   "equity": 101175317.65431288
+  },
+  {
+   "time": 1720224000,
+   "equity": 101372237.42107242
+  },
+  {
+   "time": 1720828800,
+   "equity": 101594393.67103116
+  },
+  {
+   "time": 1721433600,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1722038400,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1722643200,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1723248000,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1723852800,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1724457600,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1725062400,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1725667200,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1726272000,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1726876800,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1727481600,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1728086400,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1728691200,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1729296000,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1729900800,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1730505600,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1731110400,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1731715200,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1732320000,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1732924800,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1733529600,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1734134400,
+   "equity": 101768726.00953749
+  },
+  {
+   "time": 1734739200,
+   "equity": 101851678.47556555
+  },
+  {
+   "time": 1735344000,
+   "equity": 102345132.39970434
+  },
+  {
+   "time": 1735948800,
+   "equity": 102345132.39970434
+  },
+  {
+   "time": 1736553600,
+   "equity": 102345132.39970434
+  },
+  {
+   "time": 1737158400,
+   "equity": 102345132.39970434
+  },
+  {
+   "time": 1737763200,
+   "equity": 102345132.39970434
+  },
+  {
+   "time": 1738368000,
+   "equity": 102345132.39970434
+  },
+  {
+   "time": 1738972800,
+   "equity": 103334879.66167082
+  },
+  {
+   "time": 1739577600,
+   "equity": 103334879.66167082
+  },
+  {
+   "time": 1740182400,
+   "equity": 103334879.66167082
+  },
+  {
+   "time": 1740787200,
+   "equity": 103118171.58208302
+  },
+  {
+   "time": 1741392000,
+   "equity": 103956116.63435064
+  },
+  {
+   "time": 1741996800,
+   "equity": 103956116.63435064
+  },
+  {
+   "time": 1742601600,
+   "equity": 103956116.63435064
+  },
+  {
+   "time": 1743206400,
+   "equity": 103956116.63435064
+  },
+  {
+   "time": 1743811200,
+   "equity": 103956116.63435064
+  },
+  {
+   "time": 1744416000,
+   "equity": 103956116.63435064
+  },
+  {
+   "time": 1745020800,
+   "equity": 103956116.63435064
+  },
+  {
+   "time": 1745625600,
+   "equity": 103956116.63435064
+  },
+  {
+   "time": 1746230400,
+   "equity": 103956116.63435064
+  },
+  {
+   "time": 1746835200,
+   "equity": 103956116.63435064
+  },
+  {
+   "time": 1747440000,
+   "equity": 103956116.63435064
+  },
+  {
+   "time": 1748044800,
+   "equity": 103956116.63435064
+  },
+  {
+   "time": 1748649600,
+   "equity": 103956116.63435064
+  },
+  {
+   "time": 1749254400,
+   "equity": 103956116.63435064
+  },
+  {
+   "time": 1749859200,
+   "equity": 103956116.63435064
+  },
+  {
+   "time": 1750464000,
+   "equity": 103956116.63435064
+  },
+  {
+   "time": 1751068800,
+   "equity": 104385279.70060481
+  },
+  {
+   "time": 1751673600,
+   "equity": 104385279.70060481
+  },
+  {
+   "time": 1752278400,
+   "equity": 104385279.70060481
+  },
+  {
+   "time": 1752883200,
+   "equity": 104385279.70060481
+  },
+  {
+   "time": 1753488000,
+   "equity": 104385279.70060481
+  },
+  {
+   "time": 1754092800,
+   "equity": 104385279.70060481
+  },
+  {
+   "time": 1754697600,
+   "equity": 105322380.9404839
+  },
+  {
+   "time": 1755302400,
+   "equity": 105514853.88454561
+  },
+  {
+   "time": 1755907200,
+   "equity": 105514853.88454561
+  },
+  {
+   "time": 1756512000,
+   "equity": 105514853.88454561
+  },
+  {
+   "time": 1757116800,
+   "equity": 105514853.88454561
+  },
+  {
+   "time": 1757721600,
+   "equity": 105514853.88454561
+  },
+  {
+   "time": 1758326400,
+   "equity": 105514853.88454561
+  },
+  {
+   "time": 1758931200,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1759536000,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1760140800,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1760745600,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1761350400,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1761955200,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1762560000,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1763164800,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1763769600,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1764374400,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1764979200,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1765584000,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1766188800,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1766793600,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1767398400,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1768003200,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1768608000,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1769212800,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1769817600,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1770422400,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1771027200,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1771632000,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1772236800,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1772841600,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1773446400,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1774051200,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1774656000,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1775260800,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1775865600,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1776470400,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1777075200,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1777680000,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1778284800,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1778889600,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1779494400,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1780099200,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1780704000,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1781308800,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1781913600,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1782518400,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1783123200,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1783728000,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1784332800,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1784937600,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1785542400,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1786147200,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1786752000,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1787356800,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1787961600,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1788566400,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1789171200,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1789776000,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1790380800,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1790985600,
+   "equity": 105891665.25133163
+  },
+  {
+   "time": 1791590400,
+   "equity": 105923839.3253342
+  },
+  {
+   "time": 1792195200,
+   "equity": 105538947.90120606
+  },
+  {
+   "time": 1792800000,
+   "equity": 105463395.14017351
+  },
+  {
+   "time": 1793404800,
+   "equity": 104987507.78058791
+  },
+  {
+   "time": 1793664000,
+   "equity": 105102975.20782635
+  }
+ ],
+ "backtest_same_window": {
+  "eval_from": "2026-11-03T00:00:00Z",
+  "eval_to": "2026-11-13T00:00:00Z",
+  "capital": 100000000.0,
+  "final_equity": 100000000.0,
+  "total_return": 0.0,
+  "max_drawdown": 0.0,
+  "open_positions_at_end": [],
+  "trades": 0,
+  "win_rate": null,
+  "profit_factor": null,
+  "avg_win": null,
+  "avg_loss": null,
+  "fees_idr": 0,
+  "spread_slippage_idr": 0,
+  "gross_profit_idr": 0,
+  "cost_share_of_gross": null,
+  "cost_share_note": "laba kotor <= 0 atau tidak ada trade: rasio tidak terdefinisi",
+  "benchmark_btc_buy_hold": {
+   "total_return": -0.10987473422937344
+  },
+  "equity_curve": [
+   {
+    "time": 1793664000,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1793750400,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1793836800,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1793923200,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1794009600,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1794096000,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1794182400,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1794268800,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1794355200,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1794441600,
+    "equity": 100000000.0
+   },
+   {
+    "time": 1794528000,
+    "equity": 100000000.0
+   }
+  ],
+  "orders": []
+ },
+ "forward": {
+  "start": "2026-11-04T05:00:00Z",
+  "end": "2026-11-14T05:00:00Z",
+  "capital": 100000000.0,
+  "final_equity": 100000000.0,
+  "total_return": 0.0,
+  "max_drawdown": 0.0,
+  "trades": 0,
+  "win_rate": null,
+  "profit_factor": null,
+  "avg_win": null,
+  "avg_loss": null,
+  "fees_idr": 0,
+  "spread_slippage_idr": 0,
+  "gross_profit_idr": 0,
+  "cost_share_of_gross": null,
+  "cost_share_note": "laba kotor <= 0 atau tidak ada trade: rasio tidak terdefinisi",
+  "open_orders_buy": 0,
+  "benchmark_btc_buy_hold": {
+   "total_return": -0.0914580850029535,
+   "from": "2026-11-09T04:01:57Z",
+   "to": "2026-11-14T03:17:43Z",
+   "ask_start": 1353334000.0,
+   "bid_end": 1235037000.0
+  }
+ },
+ "forward_equity": [
+  {
+   "ts": "2026-11-09T04:01:55Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-09T04:02:15Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-09T06:17:04Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-09T09:17:03Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-09T12:17:11Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-09T15:17:35Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-09T18:17:19Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-09T21:17:50Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-10T00:17:20Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-10T03:17:42Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-10T06:17:04Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-10T09:17:03Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-10T12:17:11Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-10T15:17:35Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-10T18:17:19Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-10T21:17:50Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-11T00:17:20Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-11T03:17:42Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-11T06:17:04Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-11T09:17:03Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-11T12:17:11Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-11T15:17:35Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-11T18:17:19Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-11T21:17:50Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-12T00:17:20Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-12T03:17:42Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-12T06:17:04Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-12T09:17:03Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-12T12:17:11Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-12T15:17:35Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-12T18:17:19Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-12T21:17:50Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-13T00:17:20Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-13T03:17:42Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-13T06:17:04Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-13T09:17:03Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-13T12:17:11Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-13T15:17:35Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-13T18:17:19Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-13T21:17:50Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-14T00:17:20Z",
+   "equity": 100000000.0
+  },
+  {
+   "ts": "2026-11-14T03:17:42Z",
+   "equity": 100000000.0
+  }
+ ],
+ "forward_equity_daily": [
+  {
+   "day_wib": "2026-11-09",
+   "ts": "2026-11-09T04:01:57Z",
+   "call_id": "3f61bb8f58ba",
+   "equity": 100000000.0,
+   "cash": 100000000.0,
+   "positions": {},
+   "marked_at": "best_bid"
+  },
+  {
+   "day_wib": "2026-11-10",
+   "ts": "2026-11-09T18:17:21Z",
+   "call_id": "80abf3dbc8e2",
+   "equity": 100000000.0,
+   "cash": 100000000.0,
+   "positions": {},
+   "marked_at": "best_bid"
+  },
+  {
+   "day_wib": "2026-11-11",
+   "ts": "2026-11-10T18:17:21Z",
+   "call_id": "1a8e62d4f681",
+   "equity": 100000000.0,
+   "cash": 100000000.0,
+   "positions": {},
+   "marked_at": "best_bid"
+  },
+  {
+   "day_wib": "2026-11-12",
+   "ts": "2026-11-11T18:17:21Z",
+   "call_id": "8a37f7785bfa",
+   "equity": 100000000.0,
+   "cash": 100000000.0,
+   "positions": {},
+   "marked_at": "best_bid"
+  },
+  {
+   "day_wib": "2026-11-13",
+   "ts": "2026-11-12T18:17:21Z",
+   "call_id": "ac94920a5f37",
+   "equity": 100000000.0,
+   "cash": 100000000.0,
+   "positions": {},
+   "marked_at": "best_bid"
+  },
+  {
+   "day_wib": "2026-11-14",
+   "ts": "2026-11-13T18:17:20Z",
+   "call_id": "6ed0627f37f3",
+   "equity": 100000000.0,
+   "cash": 100000000.0,
+   "positions": {},
+   "marked_at": "best_bid"
+  }
+ ],
+ "gap": {
+  "forward_minus_backtest_return": 0.0,
+  "forward_minus_backtest_maxdd": 0.0,
+  "trades_forward": 0,
+  "trades_backtest": 0
+ },
+ "signal_match": {
+  "compared": 24,
+  "matched": 24,
+  "match_rate": 1.0,
+  "rows": [
+   {
+    "pair": "BTCIDR",
+    "candle_time": "2026-11-03T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "BTCIDR",
+    "candle_time": "2026-11-04T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "BTCIDR",
+    "candle_time": "2026-11-05T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "BTCIDR",
+    "candle_time": "2026-11-06T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "BTCIDR",
+    "candle_time": "2026-11-07T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "BTCIDR",
+    "candle_time": "2026-11-08T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "BTCIDR",
+    "candle_time": "2026-11-09T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "BTCIDR",
+    "candle_time": "2026-11-10T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "BTCIDR",
+    "candle_time": "2026-11-11T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "BTCIDR",
+    "candle_time": "2026-11-12T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "BTCIDR",
+    "candle_time": "2026-11-13T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "ETHIDR",
+    "candle_time": "2026-11-03T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "ETHIDR",
+    "candle_time": "2026-11-04T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "ETHIDR",
+    "candle_time": "2026-11-05T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "ETHIDR",
+    "candle_time": "2026-11-06T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "ETHIDR",
+    "candle_time": "2026-11-07T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "ETHIDR",
+    "candle_time": "2026-11-08T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "ETHIDR",
+    "candle_time": "2026-11-09T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "ETHIDR",
+    "candle_time": "2026-11-10T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "ETHIDR",
+    "candle_time": "2026-11-11T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "ETHIDR",
+    "candle_time": "2026-11-12T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "ETHIDR",
+    "candle_time": "2026-11-13T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "XRPIDR",
+    "candle_time": "2026-11-03T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "XRPIDR",
+    "candle_time": "2026-11-04T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "XRPIDR",
+    "candle_time": "2026-11-05T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "XRPIDR",
+    "candle_time": "2026-11-06T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "XRPIDR",
+    "candle_time": "2026-11-07T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "XRPIDR",
+    "candle_time": "2026-11-08T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "XRPIDR",
+    "candle_time": "2026-11-09T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "XRPIDR",
+    "candle_time": "2026-11-10T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "XRPIDR",
+    "candle_time": "2026-11-11T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "XRPIDR",
+    "candle_time": "2026-11-12T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "XRPIDR",
+    "candle_time": "2026-11-13T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "DOGEIDR",
+    "candle_time": "2026-11-03T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "DOGEIDR",
+    "candle_time": "2026-11-04T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "DOGEIDR",
+    "candle_time": "2026-11-05T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "DOGEIDR",
+    "candle_time": "2026-11-06T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "DOGEIDR",
+    "candle_time": "2026-11-07T00:00:00Z",
+    "live": null,
+    "backtest": "HOLD",
+    "live_reason": null,
+    "backtest_reason": "",
+    "live_had_position": null,
+    "backtest_had_position": false,
+    "match": null
+   },
+   {
+    "pair": "DOGEIDR",
+    "candle_time": "2026-11-08T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "DOGEIDR",
+    "candle_time": "2026-11-09T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "DOGEIDR",
+    "candle_time": "2026-11-10T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "DOGEIDR",
+    "candle_time": "2026-11-11T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "DOGEIDR",
+    "candle_time": "2026-11-12T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   },
+   {
+    "pair": "DOGEIDR",
+    "candle_time": "2026-11-13T00:00:00Z",
+    "live": "HOLD",
+    "backtest": "HOLD",
+    "live_reason": "",
+    "backtest_reason": "",
+    "live_had_position": false,
+    "backtest_had_position": false,
+    "match": true
+   }
+  ]
+ },
+ "fill_gaps": [],
+ "uptime": {
+  "candles_scheduled": 10,
+  "candles_on_time": 6,
+  "uptime": 0.6,
+  "rows": [
+   {
+    "candle_time": "2026-11-04T00:00:00Z",
+    "closes_at": "2026-11-05T00:00:00Z",
+    "deadline": "2026-11-06T00:00:00Z",
+    "ok": false,
+    "per_pair": {
+     "BTCIDR": "tidak_diproses",
+     "ETHIDR": "tidak_diproses",
+     "XRPIDR": "tidak_diproses",
+     "DOGEIDR": "tidak_diproses"
+    }
+   },
+   {
+    "candle_time": "2026-11-05T00:00:00Z",
+    "closes_at": "2026-11-06T00:00:00Z",
+    "deadline": "2026-11-07T00:00:00Z",
+    "ok": false,
+    "per_pair": {
+     "BTCIDR": "tidak_diproses",
+     "ETHIDR": "tidak_diproses",
+     "XRPIDR": "tidak_diproses",
+     "DOGEIDR": "tidak_diproses"
+    }
+   },
+   {
+    "candle_time": "2026-11-06T00:00:00Z",
+    "closes_at": "2026-11-07T00:00:00Z",
+    "deadline": "2026-11-08T00:00:00Z",
+    "ok": false,
+    "per_pair": {
+     "BTCIDR": "tidak_diproses",
+     "ETHIDR": "tidak_diproses",
+     "XRPIDR": "tidak_diproses",
+     "DOGEIDR": "tidak_diproses"
+    }
+   },
+   {
+    "candle_time": "2026-11-07T00:00:00Z",
+    "closes_at": "2026-11-08T00:00:00Z",
+    "deadline": "2026-11-09T00:00:00Z",
+    "ok": false,
+    "per_pair": {
+     "BTCIDR": "tidak_diproses",
+     "ETHIDR": "tidak_diproses",
+     "XRPIDR": "tidak_diproses",
+     "DOGEIDR": "tidak_diproses"
+    }
+   },
+   {
+    "candle_time": "2026-11-08T00:00:00Z",
+    "closes_at": "2026-11-09T00:00:00Z",
+    "deadline": "2026-11-10T00:00:00Z",
+    "ok": true,
+    "per_pair": {
+     "BTCIDR": "tepat_waktu",
+     "ETHIDR": "tepat_waktu",
+     "XRPIDR": "tepat_waktu",
+     "DOGEIDR": "tepat_waktu"
+    }
+   },
+   {
+    "candle_time": "2026-11-09T00:00:00Z",
+    "closes_at": "2026-11-10T00:00:00Z",
+    "deadline": "2026-11-11T00:00:00Z",
+    "ok": true,
+    "per_pair": {
+     "BTCIDR": "tepat_waktu",
+     "ETHIDR": "tepat_waktu",
+     "XRPIDR": "tepat_waktu",
+     "DOGEIDR": "tepat_waktu"
+    }
+   },
+   {
+    "candle_time": "2026-11-10T00:00:00Z",
+    "closes_at": "2026-11-11T00:00:00Z",
+    "deadline": "2026-11-12T00:00:00Z",
+    "ok": true,
+    "per_pair": {
+     "BTCIDR": "tepat_waktu",
+     "ETHIDR": "tepat_waktu",
+     "XRPIDR": "tepat_waktu",
+     "DOGEIDR": "tepat_waktu"
+    }
+   },
+   {
+    "candle_time": "2026-11-11T00:00:00Z",
+    "closes_at": "2026-11-12T00:00:00Z",
+    "deadline": "2026-11-13T00:00:00Z",
+    "ok": true,
+    "per_pair": {
+     "BTCIDR": "tepat_waktu",
+     "ETHIDR": "tepat_waktu",
+     "XRPIDR": "tepat_waktu",
+     "DOGEIDR": "tepat_waktu"
+    }
+   },
+   {
+    "candle_time": "2026-11-12T00:00:00Z",
+    "closes_at": "2026-11-13T00:00:00Z",
+    "deadline": "2026-11-14T00:00:00Z",
+    "ok": true,
+    "per_pair": {
+     "BTCIDR": "tepat_waktu",
+     "ETHIDR": "tepat_waktu",
+     "XRPIDR": "tepat_waktu",
+     "DOGEIDR": "tepat_waktu"
+    }
+   },
+   {
+    "candle_time": "2026-11-13T00:00:00Z",
+    "closes_at": "2026-11-14T00:00:00Z",
+    "deadline": "2026-11-15T00:00:00Z",
+    "ok": true,
+    "per_pair": {
+     "BTCIDR": "tepat_waktu",
+     "ETHIDR": "tepat_waktu",
+     "XRPIDR": "tepat_waktu",
+     "DOGEIDR": "tepat_waktu"
+    }
+   }
+  ]
+ },
+ "ops": {
+  "calls_total": 42,
+  "calls_ok": 42,
+  "calls_error": 0,
+  "calls_skipped_locked": 0,
+  "hourly_calls_expected": 238,
+  "api_errors": 0,
+  "kill_switch_events": 0,
+  "kill_switch_active_calls": 0,
+  "daily_loss_limit_hits": 0,
+  "data_invalid_events": 0,
+  "entry_blocked_events": 0,
+  "missed_candle_events": 0,
+  "bugfix_events": [
+   {
+    "ts": "2026-11-14T02:48:03Z",
+    "type": "bugfix_note",
+    "commit": "445819e",
+    "desc": "Redeploy di dalam jendela forward: menambah data/calibration.json dan data/backtest_full.json untuk dashboard. Kode bot/aturan/parameter/universe tidak berubah.",
+    "rules_changed": false
+   },
+   {
+    "ts": "2026-11-14T03:09:35Z",
+    "type": "bugfix_note",
+    "commit": "445819e",
+    "desc": "Redeploy atas permintaan pengguna; data/ identik dengan deploy sebelumnya (calibration c42cab13, backtest_full c07de0bd). Kode dan aturan tidak berubah.",
+    "rules_changed": false
+   },
+   {
+    "ts": "2026-11-14T03:25:10Z",
+    "type": "bugfix_note",
+    "commit": "274ecf6 (GitHub)",
+    "desc": "Deploy otomatis dari GitHub (b1e77e5, 307ab72, 274ecf6, 10.19-10.22 WIB) setelah file data dipindah ke data/. bot/, api/, vercel.json identik dengan deploy sebelumnya; aturan tidak berubah.",
+    "rules_changed": false
+   },
+   {
+    "ts": "2026-11-14T03:32:49Z",
+    "type": "bugfix_note",
+    "commit": "48f223a (GitHub)",
+    "desc": "Deploy otomatis dari GitHub: hapus bot/__pycache__. Aturan tidak berubah.",
+    "rules_changed": false
+   },
+   {
+    "ts": "2026-11-14T03:34:06Z",
+    "type": "bugfix_note",
+    "commit": "8a0415f (GitHub)",
+    "desc": "Deploy otomatis dari GitHub: rename file CSV backtest (bukan kode). Aturan tidak berubah.",
+    "rules_changed": false
+   },
+   {
+    "ts": "2026-11-14T03:36:29Z",
+    "type": "bugfix_note",
+    "commit": "2d4ba04 (GitHub)",
+    "desc": "Deploy otomatis dari GitHub: perbaikan nama file CSV backtest (bukan kode). Aturan tidak berubah.",
+    "rules_changed": false
+   },
+   {
+    "ts": "2026-11-14T03:45:10Z",
+    "type": "bugfix_note",
+    "commit": "625002e (CLI)",
+    "desc": "Deploy tampilan dashboard: logo rakahtrade dan nama/NIM penyusun (bot/report.py, bot/assets/logo.png). Kode bot, aturan, parameter tidak berubah.",
+    "rules_changed": false
+   },
+   {
+    "ts": "2026-11-14T03:45:56Z",
+    "type": "bugfix_note",
+    "commit": "409a9ab (GitHub)",
+    "desc": "Deploy otomatis dari GitHub: commit tampilan dashboard (logo + nama/NIM), isi sama dengan deploy CLI 625002e. Aturan tidak berubah.",
+    "rules_changed": false
+   },
+   {
+    "ts": "2026-11-14T04:29:20Z",
+    "type": "bugfix_note",
+    "commit": "c50bf8f (GitHub)",
+    "desc": "Deploy otomatis dari GitHub: sinkronisasi struktur repo (.vercelignore, .env.example, README, FREEZE.md). Kode bot, aturan, parameter tidak berubah.",
+    "rules_changed": false
+   }
+  ],
+  "call_delay_minutes": [
+   1.9,
+   2.2,
+   17.1,
+   17.1,
+   17.2,
+   17.6,
+   17.3,
+   17.8,
+   17.3,
+   17.7,
+   17.1,
+   17.1,
+   17.2,
+   17.6,
+   17.3,
+   17.8,
+   17.3,
+   17.7,
+   17.1,
+   17.1,
+   17.2,
+   17.6,
+   17.3,
+   17.8,
+   17.3,
+   17.7,
+   17.1,
+   17.1,
+   17.2,
+   17.6,
+   17.3,
+   17.8,
+   17.3,
+   17.7,
+   17.1,
+   17.1,
+   17.2,
+   17.6,
+   17.3,
+   17.8,
+   17.3,
+   17.7
+  ]
+ },
+ "spread_comparison": {
+  "calibration_used": {
+   "BTCIDR": {
+    "n": 9,
+    "median_spread_pct": 3.2520781888289635e-05,
+    "half_spread": 1.6260390944144818e-05,
+    "buy_slip": 0.0,
+    "sell_slip": 0.0
+   },
+   "ETHIDR": {
+    "n": 9,
+    "median_spread_pct": 0.0002871050674044397,
+    "half_spread": 0.00014355253370221984,
+    "buy_slip": 0.0,
+    "sell_slip": 0.0003905149028988602
+   },
+   "XRPIDR": {
+    "n": 9,
+    "median_spread_pct": 0.000761247430789921,
+    "half_spread": 0.0003806237153949605,
+    "buy_slip": 0.0,
+    "sell_slip": 0.0
+   },
+   "DOGEIDR": {
+    "n": 9,
+    "median_spread_pct": 0.0008035355564483728,
+    "half_spread": 0.0004017677782241864,
+    "buy_slip": 0.0,
+    "sell_slip": 0.0
+   }
+  },
+  "pre_freeze": {},
+  "all_snapshots": {
+   "BTCIDR": {
+    "n": 42,
+    "median_spread_pct": 6.644744844006158e-05,
+    "half_spread": 3.322372422003079e-05,
+    "buy_slip": 0.0,
+    "sell_slip": 3.740686928604201e-07
+   },
+   "ETHIDR": {
+    "n": 42,
+    "median_spread_pct": 0.0005909246215201932,
+    "half_spread": 0.0002954623107600966,
+    "buy_slip": 0.0,
+    "sell_slip": 0.0
+   },
+   "XRPIDR": {
+    "n": 42,
+    "median_spread_pct": 0.0006766241061096752,
+    "half_spread": 0.0003383120530548376,
+    "buy_slip": 0.0,
+    "sell_slip": 0.0
+   },
+   "DOGEIDR": {
+    "n": 42,
+    "median_spread_pct": 0.0015804052231424776,
+    "half_spread": 0.0007902026115712388,
+    "buy_slip": 0.0,
+    "sell_slip": 0.0
+   }
+  }
+ },
+ "orders": [],
+ "events_sample": [
+  {
+   "ts": "2026-11-09T04:01:55Z",
+   "call_id": "3f61bb8f58ba",
+   "type": "state_init",
+   "cash": 100000000.0
+  },
+  {
+   "ts": "2026-11-14T02:48:03Z",
+   "type": "bugfix_note",
+   "commit": "445819e",
+   "desc": "Redeploy di dalam jendela forward: menambah data/calibration.json dan data/backtest_full.json untuk dashboard. Kode bot/aturan/parameter/universe tidak berubah.",
+   "rules_changed": false
+  },
+  {
+   "ts": "2026-11-14T03:09:35Z",
+   "type": "bugfix_note",
+   "commit": "445819e",
+   "desc": "Redeploy atas permintaan pengguna; data/ identik dengan deploy sebelumnya (calibration c42cab13, backtest_full c07de0bd). Kode dan aturan tidak berubah.",
+   "rules_changed": false
+  },
+  {
+   "ts": "2026-11-14T03:25:10Z",
+   "type": "bugfix_note",
+   "commit": "274ecf6 (GitHub)",
+   "desc": "Deploy otomatis dari GitHub (b1e77e5, 307ab72, 274ecf6, 10.19-10.22 WIB) setelah file data dipindah ke data/. bot/, api/, vercel.json identik dengan deploy sebelumnya; aturan tidak berubah.",
+   "rules_changed": false
+  },
+  {
+   "ts": "2026-11-14T03:32:49Z",
+   "type": "bugfix_note",
+   "commit": "48f223a (GitHub)",
+   "desc": "Deploy otomatis dari GitHub: hapus bot/__pycache__. Aturan tidak berubah.",
+   "rules_changed": false
+  },
+  {
+   "ts": "2026-11-14T03:34:06Z",
+   "type": "bugfix_note",
+   "commit": "8a0415f (GitHub)",
+   "desc": "Deploy otomatis dari GitHub: rename file CSV backtest (bukan kode). Aturan tidak berubah.",
+   "rules_changed": false
+  },
+  {
+   "ts": "2026-11-14T03:36:29Z",
+   "type": "bugfix_note",
+   "commit": "2d4ba04 (GitHub)",
+   "desc": "Deploy otomatis dari GitHub: perbaikan nama file CSV backtest (bukan kode). Aturan tidak berubah.",
+   "rules_changed": false
+  },
+  {
+   "ts": "2026-11-14T03:45:10Z",
+   "type": "bugfix_note",
+   "commit": "625002e (CLI)",
+   "desc": "Deploy tampilan dashboard: logo rakahtrade dan nama/NIM penyusun (bot/report.py, bot/assets/logo.png). Kode bot, aturan, parameter tidak berubah.",
+   "rules_changed": false
+  },
+  {
+   "ts": "2026-11-14T03:45:56Z",
+   "type": "bugfix_note",
+   "commit": "409a9ab (GitHub)",
+   "desc": "Deploy otomatis dari GitHub: commit tampilan dashboard (logo + nama/NIM), isi sama dengan deploy CLI 625002e. Aturan tidak berubah.",
+   "rules_changed": false
+  },
+  {
+   "ts": "2026-11-14T04:29:20Z",
+   "type": "bugfix_note",
+   "commit": "c50bf8f (GitHub)",
+   "desc": "Deploy otomatis dari GitHub: sinkronisasi struktur repo (.vercelignore, .env.example, README, FREEZE.md). Kode bot, aturan, parameter tidak berubah.",
+   "rules_changed": false
+  }
+ ],
+ "errors_sample": []
+}

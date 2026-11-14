@@ -1,0 +1,11 @@
+call_id,cash,commit,desc,rules_changed,ts,type
+3f61bb8f58ba,100000000.0,,,,2026-11-09T04:01:55Z,state_init
+,,445819e,Redeploy di dalam jendela forward: menambah data/calibration.json dan data/backtest_full.json untuk dashboard. Kode bot/aturan/parameter/universe tidak berubah.,False,2026-11-14T02:48:03Z,bugfix_note
+,,445819e,"Redeploy atas permintaan pengguna; data/ identik dengan deploy sebelumnya (calibration c42cab13, backtest_full c07de0bd). Kode dan aturan tidak berubah.",False,2026-11-14T03:09:35Z,bugfix_note
+,,274ecf6 (GitHub),"Deploy otomatis dari GitHub (b1e77e5, 307ab72, 274ecf6, 10.19-10.22 WIB) setelah file data dipindah ke data/. bot/, api/, vercel.json identik dengan deploy sebelumnya; aturan tidak berubah.",False,2026-11-14T03:25:10Z,bugfix_note
+,,48f223a (GitHub),Deploy otomatis dari GitHub: hapus bot/__pycache__. Aturan tidak berubah.,False,2026-11-14T03:32:49Z,bugfix_note
+,,8a0415f (GitHub),Deploy otomatis dari GitHub: rename file CSV backtest (bukan kode). Aturan tidak berubah.,False,2026-11-14T03:34:06Z,bugfix_note
+,,2d4ba04 (GitHub),Deploy otomatis dari GitHub: perbaikan nama file CSV backtest (bukan kode). Aturan tidak berubah.,False,2026-11-14T03:36:29Z,bugfix_note
+,,625002e (CLI),"Deploy tampilan dashboard: logo rakahtrade dan nama/NIM penyusun (bot/report.py, bot/assets/logo.png). Kode bot, aturan, parameter tidak berubah.",False,2026-11-14T03:45:10Z,bugfix_note
+,,409a9ab (GitHub),"Deploy otomatis dari GitHub: commit tampilan dashboard (logo + nama/NIM), isi sama dengan deploy CLI 625002e. Aturan tidak berubah.",False,2026-11-14T03:45:56Z,bugfix_note
+,,c50bf8f (GitHub),"Deploy otomatis dari GitHub: sinkronisasi struktur repo (.vercelignore, .env.example, README, FREEZE.md). Kode bot, aturan, parameter tidak berubah.",False,2026-11-14T04:29:20Z,bugfix_note
