@@ -34,7 +34,16 @@ def main():
     rows = []
     for i, sym in enumerate(cands):
         try:
-            cs = API.history(sym, "1D", asof - a.days * 86400, asof - 1, retries=2)
+            # satu percobaan per pair: respons kosong = pair belum punya data pada periode itu
+            frm, to = asof - a.days * 86400, asof - 1
+            try:
+                raw = API.get_json(f"/tradingview/history_v2?symbol={sym}&tf=1D&from={frm}&to={to}", retries=1)
+            except API.ApiError as e:
+                if "kosong" in str(e):
+                    raw = []
+                else:
+                    raise
+            cs = [{"Time": int(c["Time"]), "Close": float(c["Close"]), "Volume": float(c["Volume"])} for c in raw]
         except API.ApiError as e:
             rows.append({"pair": sym, "error": str(e)})
             continue

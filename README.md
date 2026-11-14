@@ -5,7 +5,8 @@ Bot trading **dry run** (order simulasi, tanpa uang sungguhan, tanpa API key). B
 - Strategi: lihat [STRATEGI.md](STRATEGI.md) (Mean Reversion RSI(4) < 10 + filter SMA50/200, harian, long-only).
 - Status freeze: lihat [FREEZE.md](FREEZE.md). **Belum ada commit freeze yang sah.**
 - Sumber fee dan minimum order: [FEES_SOURCES.md](FEES_SOURCES.md).
-- Refleksi: [REFLEKSI.md](REFLEKSI.md) (draf; diisi dari `data/dashboard_data.json` setelah forward selesai).
+- Refleksi: [REFLEKSI.md](REFLEKSI.md) (final; angka dari `data/dashboard_data.json`).
+- Model eksekusi: [docs/execution-model.md](docs/execution-model.md) · Kebijakan risiko: [docs/risk-policy.md](docs/risk-policy.md) · Change log: [docs/change-log.md](docs/change-log.md)
 
 Hanya memakai **standard library Python 3.9+**. Tidak ada dependensi pihak ketiga.
 
@@ -36,7 +37,8 @@ bot/indodax.py        klien API publik: timeout + retry terbatas
 bot/storage.py        Vercel Blob / Upstash Redis REST (+ file lokal untuk tes)
 scripts/              fetch_history, collect_snapshots, calibrate_costs, universe_selection,
                       backtest, export_logs, hitung_ulang, kill_switch, reset_state,
-                      log_bugfix, freeze_manifest, smoke_test
+                      log_bugfix, freeze_manifest, smoke_test, export_submission
+docs/                 execution-model.md, risk-policy.md, change-log.md
 tests/test_core.py    unit test (sinyal, candle tertutup, sweep, auth, idempotency, kill switch, retry)
 vercel.json           konfigurasi fungsi + 8 cron harian
 .vercelignore         berkas yang tidak ikut deploy
@@ -126,7 +128,13 @@ python scripts/hitung_ulang.py
 python scripts/hitung_ulang.py --verify dashboard.html
 ```
 
-`hitung_ulang.py` menghasilkan `data/dashboard_data.json` dan `dashboard.html` (offline, mandiri) dari log mentah di `data/raw/`, ditambah candle Indodax untuk replay backtest pada jendela yang sama. `--verify` memastikan setiap angka di HTML identik dengan hasil hitung ulang. Dashboard Vercel memakai `bot/metrics.py` dan `bot/report.py` yang sama.
+`hitung_ulang.py` menghasilkan `data/dashboard_data.json` dan `dashboard.html` (offline, mandiri) dari log mentah di `data/raw/`, ditambah candle Indodax untuk replay backtest pada jendela yang sama. `--verify` memastikan setiap angka di HTML identik dengan hasil hitung ulang.
+
+Paket pengumpulan RISE (berkas terlacak + folder `.git`, dengan cek berkas wajib dan secret):
+
+```bash
+python scripts/export_submission.py
+``` Dashboard Vercel memakai `bot/metrics.py` dan `bot/report.py` yang sama.
 
 ## Keamanan
 

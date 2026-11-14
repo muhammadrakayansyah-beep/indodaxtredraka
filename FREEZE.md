@@ -10,6 +10,7 @@
 |---|---|
 | 9 Nov 11.01 | Bot di-deploy ke Vercel dan dipanggil pertama kali (uji koneksi 401/200 lolos) |
 | 9 Nov 11.12 | Commit pertama repositori GitHub |
+| 9 Nov 11.57 | Commit `218a6c1`: **freeze de facto**. Sejak commit ini, 8 file inti bot (`bot/strategy.py`, `config.py`, `validation.py`, `execution.py`, `backtest_core.py`, `engine.py`, `indodax.py`, `storage.py`) tidak berubah (hash sama dengan HEAD) |
 | 9–14 Nov | Bot berjalan otomatis 8× sehari (Vercel Cron), state & log di Vercel Blob |
 | 14 Nov 09.47 | Kalibrasi biaya (cutoff 2026-11-10T00:17:24Z) dan backtest 3 tahun |
 | 14 Nov 09.55–10.50 | Beberapa deploy di dalam jendela forward: data backtest untuk dashboard, perapian nama berkas, logo dan nama di dashboard, sinkronisasi struktur repo. Kode sinyal, parameter, dan universe **tidak berubah**. Setiap deploy dicatat sebagai event `bugfix_note` di `data/raw/events.jsonl` |
