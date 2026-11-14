@@ -44,9 +44,12 @@ def load_candles(offline, now):
 def compute(offline, now=None):
     raw = load_raw()
     if now is None:
-        # waktu acuan = panggilan terakhir di log (reproducible), bukan jam laptop
+        # Waktu acuan: waktu server Indodax saat dihitung (online), atau panggilan terakhir di log
+        # (offline). Waktu yang dipakai ikut tersimpan di dashboard (generated_for_now) dan dipakai
+        # ulang oleh --verify, sehingga hasilnya tetap reproducible.
         calls = raw.get("calls") or []
-        now = max([c.get("server_time_unix") or c["ts_wall_unix"] for c in calls], default=int(time.time()))
+        last_call = max([c.get("server_time_unix") or c["ts_wall_unix"] for c in calls], default=int(time.time()))
+        now = last_call if offline else max(last_call, API.server_time())
     cal_path = _lib.p("data", "calibration.json")
     cal = json.load(open(cal_path)) if os.path.exists(cal_path) else None
     calib = cal["pairs"] if cal and cal.get("valid") else None
@@ -64,12 +67,13 @@ def canon(x):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--offline", action="store_true")
-    ap.add_argument("--now", default=None, help="ISO UTC; default = panggilan terakhir di log")
+    ap.add_argument("--now", default=None, help="ISO UTC; default = waktu server Indodax (online) atau panggilan terakhir di log (offline)")
     ap.add_argument("--verify", default=None, help="path dashboard.html untuk dicocokkan")
     a = ap.parse_args()
-    D = canon(compute(a.offline, parse_iso(a.now) if a.now else None))
     if a.verify:
         H = R.extract_data(open(a.verify, encoding="utf-8").read())
+        # hitung ulang dengan waktu acuan yang sama seperti saat dashboard dibuat
+        D = canon(compute(a.offline, parse_iso(a.now or H["generated_for_now"])))
         diffs = []
 
         def walk(x, y, path=""):
@@ -82,7 +86,7 @@ def main():
             elif isinstance(x, float) and isinstance(y, float):
                 if abs(x - y) > 1e-9 * max(1.0, abs(x)):
                     diffs.append((path, x, y))
-            elif x != y and path != ".generated_for_now":
+            elif x != y:
                 diffs.append((path, x, y))
         walk(D, H)
         if diffs:
@@ -92,6 +96,7 @@ def main():
             sys.exit(1)
         print("COCOK: semua angka di", a.verify, "identik dengan hasil hitung ulang dari log mentah")
         return
+    D = canon(compute(a.offline, parse_iso(a.now) if a.now else None))
     json.dump(D, open(_lib.p("data", "dashboard_data.json"), "w"), indent=1, ensure_ascii=False)
     open(_lib.p("dashboard.html"), "w", encoding="utf-8").write(R.render(D))
     f = D["forward"]

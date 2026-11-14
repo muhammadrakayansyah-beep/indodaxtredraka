@@ -1,5 +1,5 @@
 {
- "generated_for_now": "2026-11-14T03:17:43Z",
+ "generated_for_now": "2026-11-14T11:43:56Z",
  "strategy_version": "mr-rsi4-sma200-v1",
  "universe": [
   "BTCIDR",
@@ -7,7 +7,7 @@
   "XRPIDR",
   "DOGEIDR"
  ],
- "forward_complete": false,
+ "forward_complete": true,
  "backtest_full": {
   "eval_from": "2023-11-04T00:00:00Z",
   "eval_to": "2026-11-03T00:00:00Z",
@@ -2292,7 +2292,7 @@
   "calls_ok": 42,
   "calls_error": 0,
   "calls_skipped_locked": 0,
-  "hourly_calls_expected": 238,
+  "hourly_calls_expected": 240,
   "api_errors": 0,
   "kill_switch_events": 0,
   "kill_switch_active_calls": 0,
